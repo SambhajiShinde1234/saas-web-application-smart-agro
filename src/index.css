@@ -13,7 +13,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
 }
 
 body {
@@ -22,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  background-color: #242424;
+  background: #f6f6f6;
   color: rgba(255, 255, 255, 0.87);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
