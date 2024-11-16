@@ -1,6 +1,7 @@
-import { styled, Box, Stack, Typography } from '@mui/material';
+import { styled, Box, Stack, Typography, ListItemText } from '@mui/material';
 
 // icons
+
 export const StyledIconBox = styled(Box)(() => ({
   background: '#FFF',
   borderRadius: '50px',
@@ -26,10 +27,26 @@ export const StyledFlexBetween = styled(Stack)(() => ({
 
 export const StyledPrimaryTypography = styled(Typography)(() => ({
   color: '#292A3B',
-  fontWeight: '900'
+  fontWeight: '900',
 }));
 
 export const StyledSecondaryTypography = styled(Typography)(() => ({
   color: '#A0A4A3',
-  fontWeight: '600'
+  fontWeight: '600',
+}));
+
+// sidebar
+
+export const StyledLogo = styled(Box)(() => ({
+  height: '3.5rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}));
+
+export const StyledListeitemText = styled(Typography)(() => ({
+  color: '#A0A4A3',
+  fontWeight: '600',
+  fontSize: '0.9rem',
+  fontFamily: 'monospace',
 }));

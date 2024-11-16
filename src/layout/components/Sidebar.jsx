@@ -1,5 +1,4 @@
 import {
-  Box,
   List,
   ListItem,
   ListItemButton,
@@ -8,6 +7,10 @@ import {
 } from '@mui/material';
 import DashboardIcon from '../../components/icons/DashboardIcon';
 import OverviewIcon from '../../components/icons/OverviewIcon';
+import {
+  StyledListeitemText,
+  StyledLogo,
+} from '../../components/styled/styled';
 
 const MENUS = [
   {
@@ -24,24 +27,19 @@ const MENUS = [
 const Sidebar = () => {
   return (
     <>
-      <Box
-        sx={{
-          height: '3.5rem',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <span>
-            
-        </span>
-      </Box>
+      <StyledLogo>
+        <span></span>
+      </StyledLogo>
       <List>
         {MENUS.map((menu, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
               <ListItemIcon>{menu.icon}</ListItemIcon>
-              <ListItemText primary={menu.title} />
+              <ListItemText
+                primary={
+                  <StyledListeitemText>{menu.title}</StyledListeitemText>
+                }
+              />
             </ListItemButton>
           </ListItem>
         ))}
