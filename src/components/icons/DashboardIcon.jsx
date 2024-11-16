@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DashboardIcon = () => {
   return (
     <svg
@@ -9,10 +7,10 @@ const DashboardIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-layout-dashboard"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-layout-dashboard"
     >
       <rect width="7" height="9" x="3" y="3" rx="1" />
       <rect width="7" height="5" x="14" y="3" rx="1" />

@@ -21,8 +21,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  background: #f6f6f6;
-  color: rgba(255, 255, 255, 0.87);
+  background: #F6F6F6;
+  color: rgba(16, 16, 16, 0.87);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
