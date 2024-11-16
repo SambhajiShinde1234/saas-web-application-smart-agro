@@ -14,6 +14,7 @@ export const StyledIconBox = styled(Box)(() => ({
   background: '#FFF',
   borderRadius: '50px',
   padding: '0.2rem',
+  outline: '2px solid #EBEFF0',
 }));
 
 // flex
@@ -82,10 +83,10 @@ export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({
 
 // layout
 
-export const StyledLayoutBox = styled(Box)(() => ({
+export const StyledLayoutBox = styled(Box)(({ isMobileScreen }) => ({
   display: 'flex',
   height: '100vh',
-  margin: '1rem',
+  margin: isMobileScreen ? '0rem' : '1rem',
 }));
 
 export const StyledDrawer = styled(Drawer)(({ drawerwidth }) => ({
@@ -98,11 +99,11 @@ export const StyledDrawer = styled(Drawer)(({ drawerwidth }) => ({
   },
 }));
 
-export const StyledMainBox = styled(Box)(({ drawerwidth }) => ({
+export const StyledMainBox = styled(Box)(({ drawerwidth, isMobileScreen }) => ({
   flexGrow: 1,
   width: `calc(100% - ${drawerwidth}px)`,
-  background: '#F5F9F8',
-  borderRadius: '40px',
+  background: '#F2F8F8',
+  borderRadius: isMobileScreen ? '0px' : '40px',
   padding: '1.5rem',
 }));
 
@@ -113,7 +114,8 @@ export const StyledChildrenBox = styled(Box)(() => ({
 // cards
 
 export const StyledCard = styled(Box)(() => ({
-  padding: '12px',
+  padding: '20px',
   background: '#FFF',
-  borderRadius: '18px'
+  borderRadius: '18px',
+  outline: '2px solid #EBEFF0',
 }));

@@ -35,9 +35,7 @@ const Sidebar = ({ handleDrawerToggle }) => {
       <StyledLogoBox>
         <StyledLogo>
           SMART
-          <StyledLogoPro>
-            36O<sup>o</sup>
-          </StyledLogoPro>
+          <StyledLogoPro>AGRO</StyledLogoPro>
         </StyledLogo>
       </StyledLogoBox>
       <List>

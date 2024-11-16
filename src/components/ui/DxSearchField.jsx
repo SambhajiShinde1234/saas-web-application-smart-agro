@@ -7,6 +7,7 @@ const DxSearchField = () => {
         padding: '0.5rem 1.5rem',
         background: '#FFF',
         borderRadius: '50px',
+        outline: '2px solid #EBEFF0',
       }}
     >
       <FormControl variant="standard">

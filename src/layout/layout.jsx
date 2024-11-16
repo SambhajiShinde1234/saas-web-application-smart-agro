@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { Box, IconButton, useTheme, useMediaQuery } from '@mui/material';
-import HumbergureMenu from '../components/icons/HumbergureMenu';
+import { Box, useTheme, useMediaQuery } from '@mui/material';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import {
@@ -23,7 +22,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <StyledLayoutBox>
+    <StyledLayoutBox isMobileScreen={isMobileScreen}>
       {/* Drawer (Sidebar) */}
       <StyledDrawer
         variant={isMobileScreen ? 'temporary' : 'permanent'}
@@ -35,19 +34,10 @@ const Layout = ({ children }) => {
         <Sidebar handleDrawerToggle={handleDrawerToggle} />
       </StyledDrawer>
       {/* Main Content */}
-      <StyledMainBox component="main">
+      <StyledMainBox component="main" isMobileScreen={isMobileScreen}>
         <Box>
-          {isMobileScreen && (
-            <IconButton
-              edge="start"
-              onClick={handleDrawerToggle}
-              aria-label="menu"
-            >
-              <HumbergureMenu />
-            </IconButton>
-          )}
           {/* Top Navbar */}
-          <Header />
+          <Header handleDrawerToggle={handleDrawerToggle} />
         </Box>
         <StyledChildrenBox>{children}</StyledChildrenBox>
       </StyledMainBox>
