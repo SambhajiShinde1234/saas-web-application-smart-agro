@@ -107,5 +107,13 @@ export const StyledMainBox = styled(Box)(({ drawerwidth }) => ({
 }));
 
 export const StyledChildrenBox = styled(Box)(() => ({
-  margin: '3rem 1rem',
+  margin: '3rem 0rem',
+}));
+
+// cards
+
+export const StyledCard = styled(Box)(() => ({
+  padding: '12px',
+  background: '#FFF',
+  borderRadius: '18px'
 }));
