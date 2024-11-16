@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import {
-  Box,
-  Drawer,
-  IconButton,
-  useTheme,
-  useMediaQuery,
-} from '@mui/material';
+import { Box, IconButton, useTheme, useMediaQuery } from '@mui/material';
 import HumbergureMenu from '../components/icons/HumbergureMenu';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import {
+  StyledChildrenBox,
+  StyledDrawer,
+  StyledLayoutBox,
+  StyledMainBox,
+} from '../components/styled/styled';
 
-const drawerWidth = 240;
+const drawerwidth = 240;
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -23,37 +23,20 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', height: '100vh', margin: '1rem' }}>
+    <StyledLayoutBox>
       {/* Drawer (Sidebar) */}
-      <Drawer
+      <StyledDrawer
         variant={isMobileScreen ? 'temporary' : 'permanent'}
         open={open}
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            border: 'none'
-          },
-        }}
+        drawerwidth={drawerwidth}
       >
-        <Sidebar />
-      </Drawer>
+        <Sidebar handleDrawerToggle={handleDrawerToggle} />
+      </StyledDrawer>
       {/* Main Content */}
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          width: `calc(100% - ${drawerWidth}px)`,
-           background: '#F5F9F8',
-           borderRadius: '40px',
-           padding: '1.5rem'
-        }}
-      >
-        <Box sx={{  }}>
+      <StyledMainBox component="main">
+        <Box>
           {isMobileScreen && (
             <IconButton
               edge="start"
@@ -66,11 +49,9 @@ const Layout = ({ children }) => {
           {/* Top Navbar */}
           <Header />
         </Box>
-        <Box sx={{ margin: '1rem' }}>
-          {/* {children} */}
-        </Box>
-      </Box>
-    </Box>
+        <StyledChildrenBox>{children}</StyledChildrenBox>
+      </StyledMainBox>
+    </StyledLayoutBox>
   );
 };
 
