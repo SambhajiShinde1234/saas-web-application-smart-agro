@@ -1,6 +1,5 @@
 import {
   Box,
-  Divider,
   List,
   ListItem,
   ListItemButton,
@@ -8,7 +7,20 @@ import {
   ListItemText,
 } from '@mui/material';
 import DashboardIcon from '../../components/icons/DashboardIcon';
+import OverviewIcon from '../../components/icons/OverviewIcon';
 
+const MENUS = [
+  {
+    id: 1,
+    title: 'Overview',
+    icon: <DashboardIcon />,
+  },
+  {
+    id: 2,
+    title: 'Dashboard',
+    icon: <OverviewIcon />,
+  },
+];
 const Sidebar = () => {
   return (
     <>
@@ -20,17 +32,16 @@ const Sidebar = () => {
           alignItems: 'center',
         }}
       >
-        <span style={{ fontSize: '40px' }}>Logo</span>
+        <span>
+            
+        </span>
       </Box>
-      <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {MENUS.map((menu, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <DashboardIcon /> : <DashboardIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{menu.icon}</ListItemIcon>
+              <ListItemText primary={menu.title} />
             </ListItemButton>
           </ListItem>
         ))}

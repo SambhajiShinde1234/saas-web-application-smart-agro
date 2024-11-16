@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', height: '100vh' }}>
+    <Box sx={{ display: 'flex', height: '100vh', margin: '1rem' }}>
       {/* Drawer (Sidebar) */}
       <Drawer
         variant={isMobileScreen ? 'temporary' : 'permanent'}
@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+            border: 'none'
           },
         }}
       >
@@ -47,9 +48,12 @@ const Layout = ({ children }) => {
         sx={{
           flexGrow: 1,
           width: `calc(100% - ${drawerWidth}px)`,
+           background: '#F5F9F8',
+           borderRadius: '40px',
+           padding: '1.5rem'
         }}
       >
-        <Box sx={{ padding: '1rem 1rem', borderBottom: '1px solid red' }}>
+        <Box sx={{  }}>
           {isMobileScreen && (
             <IconButton
               edge="start"
@@ -62,8 +66,8 @@ const Layout = ({ children }) => {
           {/* Top Navbar */}
           <Header />
         </Box>
-        <Box sx={{ border: '1px solid green', margin: '1rem' }}>
-          {children}
+        <Box sx={{ margin: '1rem' }}>
+          {/* {children} */}
         </Box>
       </Box>
     </Box>
