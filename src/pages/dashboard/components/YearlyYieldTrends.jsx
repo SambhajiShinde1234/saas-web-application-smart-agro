@@ -16,7 +16,6 @@ const YearlyYieldTrends = () => {
         <SingleBarChart
           graphData={FARMS[0].fields[0].yield}
           xAxisDataKey="year"
-          
           barDataKey="production"
           barFillColor="#8884d8"
         />
