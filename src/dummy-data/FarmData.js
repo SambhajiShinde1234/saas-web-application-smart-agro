@@ -62,8 +62,10 @@ export const FARMS = [
           { month: '2024-07', pesticide: 5, fertilizer: 20 },
         ],
         yield: [
-          { year: 2023, value: 15 },
-          { year: 2024, value: 18 },
+          { year: 2021, production: 18 },
+          { year: 2022, production: 18 },
+          { year: 2023, production: 15 },
+          { year: 2024, production: 18 },
         ],
       },
       {
