@@ -16,18 +16,22 @@ const SingleBarChart = ({
   barDataKey,
   barFillColor = '#82ca9d',
   legendIconType = 'circle',
+  top = 20,
+  right = -20,
+  left = -30,
+  bottom = 5,
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
         data={graphData}
         barSize={25}
-        // margin={{
-        //   top: { top },
-        //   right: { right },
-        //   left: { left },
-        //   bottom: { bottom },
-        // }}
+        margin={{
+          top: top,
+          right: right,
+          left: left,
+          bottom: bottom,
+        }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={xAxisDataKey} />
