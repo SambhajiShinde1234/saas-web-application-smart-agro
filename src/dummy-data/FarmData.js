@@ -52,10 +52,14 @@ export const FARMS = [
           { month: '2024-02', value: 25 },
           { month: '2024-03', value: 22 },
         ],
-        pesticideUsage: [
-          { month: '2024-01', value: 5 },
-          { month: '2024-02', value: 4 },
-          { month: '2024-03', value: 6 },
+        pesticideFertilizerUsage: [
+          { month: '2024-01', pesticide: 5, fertilizer: 20 },
+          { month: '2024-02', pesticide: 4, fertilizer: 10 },
+          { month: '2024-03', pesticide: 6, fertilizer: 30 },
+          { month: '2024-04', pesticide: 5, fertilizer: 20 },
+          { month: '2024-05', pesticide: 5, fertilizer: 20 },
+          { month: '2024-06', pesticide: 5, fertilizer: 20 },
+          { month: '2024-07', pesticide: 5, fertilizer: 20 },
         ],
         yield: [
           { year: 2023, value: 15 },
