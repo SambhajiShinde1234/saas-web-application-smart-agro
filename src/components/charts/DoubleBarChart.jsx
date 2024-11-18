@@ -17,6 +17,10 @@ const DoubleBarChart = ({
   barLeftFillColor = '#82ca9d',
   barRightFillColor = '#82ca9d',
   legendIconType = 'circle',
+  top = 20,
+  right = -20,
+  left = -30,
+  bottom = 5,
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -24,10 +28,10 @@ const DoubleBarChart = ({
         data={graphData}
         barSize={25}
         margin={{
-          top: 20,
-          right: -20,
-          left: -30,
-          bottom: 5,
+          top: top,
+          right: right,
+          left: left,
+          bottom: bottom,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
