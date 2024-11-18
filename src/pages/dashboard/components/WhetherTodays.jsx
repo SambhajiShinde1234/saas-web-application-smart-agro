@@ -9,7 +9,7 @@ const WhetherTodays = () => {
     <StyledCard>
       <StyledCardStack>
         <DxSecondaryTypography variant="h6">
-          Whether&apos;s Today
+          Weather&apos;s Today
         </DxSecondaryTypography>
         <Grid2 container spacing={2}>
           <Grid2 size={{ xs: 6 }}>

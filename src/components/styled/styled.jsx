@@ -92,7 +92,7 @@ export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({
 
 export const StyledLayoutBox = styled(Box)(({ isMobileScreen }) => ({
   display: 'flex',
-  height: '100vh',
+  minHeight: '100vh',
   margin: isMobileScreen ? '0rem' : '1rem',
 }));
 
@@ -115,7 +115,7 @@ export const StyledMainBox = styled(Box)(({ drawerwidth, isMobileScreen }) => ({
 }));
 
 export const StyledChildrenBox = styled(Box)(() => ({
-  margin: '3rem 0rem',
+  margin: '2rem 0 0 0 ',
 }));
 
 // cards
