@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
+  styled,
   Table,
   TableBody,
   TableCell,
@@ -8,9 +9,20 @@ import {
   TableRow,
 } from '@mui/material';
 
+const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
+  overflowX: 'auto',
+  maxWidth: '450px',
+  [theme.breakpoints.up('xs')]: {
+    maxWidth: '600px',
+  },
+  [theme.breakpoints.up('md')]: {
+    maxWidth: '100%',
+  },
+}));
+
 const DxTable = ({ columns, data, tableHeadBgColor = '#E8EBF0' }) => {
   return (
-    <TableContainer sx={{ overflowX: 'auto', maxWidth: '100%' }}>
+    <StyledTableContainer>
       <Table>
         <TableHead sx={{ background: tableHeadBgColor }}>
           <TableRow>
@@ -33,7 +45,7 @@ const DxTable = ({ columns, data, tableHeadBgColor = '#E8EBF0' }) => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </StyledTableContainer>
   );
 };
 
