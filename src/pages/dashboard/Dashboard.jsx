@@ -5,6 +5,7 @@ import FinancialMetrics from './components/FinancialMetrics';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import FertilizerPesticidesCompare from './components/FertilizerPesticidesCompare';
 import YearlyYieldTrends from './components/YearlyYieldTrends';
+import SoilMoistureHumidity from './components/SoilMoistureHumidity';
 
 const Dashboard = () => {
   return (
@@ -25,6 +26,9 @@ const Dashboard = () => {
         </Grid2>
         <Grid2 size={{ xs: 12, md: 4 }}>
           <YearlyYieldTrends />
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 8 }}>
+          <SoilMoistureHumidity />
         </Grid2>
       </Grid2>
     </Stack>

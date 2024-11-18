@@ -1,5 +1,5 @@
-import { StyledCard } from '../../../components/styled/styled';
-import { Box, Stack } from '@mui/material';
+import { StyledCard, StyledChartBox } from '../../../components/styled/styled';
+import { Stack } from '@mui/material';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import SingleBarChart from '../../../components/charts/SingleBarChart';
 import { FARMS } from '../../../dummy-data/FarmData';
@@ -11,15 +11,15 @@ const YearlyYieldTrends = () => {
         <DxSecondaryTypography variant="h6">
           Yearly Yield Production Trends
         </DxSecondaryTypography>
+        <StyledChartBox>
+          <SingleBarChart
+            graphData={FARMS[0].fields[0].yield}
+            xAxisDataKey="year"
+            barDataKey="production"
+            barFillColor="#4C8C52"
+          />
+        </StyledChartBox>
       </Stack>
-      <Box sx={{ height: '300px' }}>
-        <SingleBarChart
-          graphData={FARMS[0].fields[0].yield}
-          xAxisDataKey="year"
-          barDataKey="production"
-          barFillColor="#8884d8"
-        />
-      </Box>
     </StyledCard>
   );
 };

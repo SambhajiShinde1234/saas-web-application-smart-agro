@@ -8,6 +8,12 @@ import {
   ListItemIcon,
 } from '@mui/material';
 
+// charts
+
+export const StyledChartBox = styled(Box)(() => ({
+  height: '300px',
+}));
+
 // icons
 
 export const StyledIconBox = styled(Box)(() => ({
