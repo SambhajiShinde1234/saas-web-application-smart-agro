@@ -196,3 +196,22 @@ export const LABOR_MANAGEMENT = [
     efficiency: '1.875 acres/worker-hour',
   },
 ];
+
+export const ALERT_WITH_NOTIFICATIONS = [
+  { 
+    alertId: 1, 
+    timestamp: '2024-11-01T05:00:00Z', 
+    type: 'Irrigation Required', 
+    severity: 'High', 
+    field: 'North Field', 
+    action: 'Increase irrigation by 20%' 
+  },
+  { 
+    alertId: 2, 
+    timestamp: '2024-11-01T12:00:00Z', 
+    type: 'Temperature Drop', 
+    severity: 'Medium', 
+    field: 'South Field', 
+    action: 'Apply protective covers for crops' 
+  },
+];
