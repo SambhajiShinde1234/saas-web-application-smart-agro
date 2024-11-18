@@ -8,6 +8,7 @@ import YearlyYieldTrends from './components/YearlyYieldTrends';
 import TempratureHumidity from './components/TemparatureHumidity';
 import SoilMoisture from './components/SoilMoisture';
 import { StyledCardStack } from '../../components/styled/styled';
+import LaborManagement from './components/LaborManagement';
 
 const Dashboard = () => {
   return (
@@ -34,6 +35,9 @@ const Dashboard = () => {
         </Grid2>
         <Grid2 size={{ xs: 12, md: 4 }}>
           <SoilMoisture />
+        </Grid2>
+        <Grid2 size={{ xs: 12 }}>
+          <LaborManagement />
         </Grid2>
       </Grid2>
     </StyledCardStack>
