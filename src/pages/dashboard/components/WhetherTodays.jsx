@@ -1,5 +1,5 @@
 import { Grid2, Stack } from '@mui/material';
-import { StyledCard } from '../../../components/styled/styled';
+import { StyledCard, StyledCardStack } from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import { FARMS } from '../../../dummy-data/FarmData';
 import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
@@ -7,7 +7,7 @@ import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
 const WhetherTodays = () => {
   return (
     <StyledCard>
-      <Stack sx={{ gap: '1rem' }}>
+      <StyledCardStack>
         <DxSecondaryTypography variant="h6">
           Whether&apos;s Today
         </DxSecondaryTypography>
@@ -49,7 +49,7 @@ const WhetherTodays = () => {
             </Stack>
           </Grid2>
         </Grid2>
-      </Stack>
+      </StyledCardStack>
     </StyledCard>
   );
 };

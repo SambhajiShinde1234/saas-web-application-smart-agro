@@ -1,5 +1,5 @@
 import { Grid2, Stack } from '@mui/material';
-import { StyledCard } from '../../../components/styled/styled';
+import { StyledCard, StyledCardStack } from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
 import { FARMS } from '../../../dummy-data/FarmData';
@@ -7,7 +7,7 @@ import { FARMS } from '../../../dummy-data/FarmData';
 const FarmOverview = () => {
   return (
     <StyledCard>
-      <Stack sx={{ gap: '1rem' }}>
+      <StyledCardStack>
         <DxSecondaryTypography variant="h6">
           Farm Overview
         </DxSecondaryTypography>
@@ -45,7 +45,7 @@ const FarmOverview = () => {
             </Stack>
           </Grid2>
         </Grid2>
-      </Stack>
+      </StyledCardStack>
     </StyledCard>
   );
 };

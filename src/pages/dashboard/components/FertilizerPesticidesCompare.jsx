@@ -1,5 +1,4 @@
-import { Stack } from '@mui/material';
-import { StyledCard, StyledChartBox } from '../../../components/styled/styled';
+import { StyledCard, StyledCardStack, StyledChartBox } from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import { FARMS } from '../../../dummy-data/FarmData';
 import DoubleBarChart from '../../../components/charts/DoubleBarChart';
@@ -7,7 +6,7 @@ import DoubleBarChart from '../../../components/charts/DoubleBarChart';
 const FertilizerPesticidesCompare = () => {
   return (
     <StyledCard>
-      <Stack sx={{ gap: '1rem' }}>
+      <StyledCardStack>
         <DxSecondaryTypography variant="h6">
           Fertilizer & Pesticide Usage{' '}
         </DxSecondaryTypography>
@@ -21,7 +20,7 @@ const FertilizerPesticidesCompare = () => {
             barRightFillColor="#82ca9d"
           />
         </StyledChartBox>
-      </Stack>
+      </StyledCardStack>
     </StyledCard>
   );
 };

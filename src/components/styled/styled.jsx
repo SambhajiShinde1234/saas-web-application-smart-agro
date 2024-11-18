@@ -24,6 +24,7 @@ export const StyledIconBox = styled(Box)(() => ({
 }));
 
 // flex
+
 export const StyledFlexCenter = styled(Stack)(() => ({
   flexDirection: 'row',
   alignItems: 'center',
@@ -124,4 +125,8 @@ export const StyledCard = styled(Box)(() => ({
   background: '#FFF',
   borderRadius: '18px',
   outline: '2px solid #EBEFF0',
+}));
+
+export const StyledCardStack = styled(Stack)(() => ({
+  gap: '1em',
 }));

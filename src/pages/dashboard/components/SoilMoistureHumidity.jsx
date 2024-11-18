@@ -1,11 +1,10 @@
-import { Stack } from '@mui/material';
-import { StyledCard, StyledChartBox } from '../../../components/styled/styled';
+import { StyledCard, StyledCardStack, StyledChartBox } from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 
 const SoilMoistureHumidity = () => {
   return (
     <StyledCard>
-      <Stack sx={{ gap: '1rem' }}>
+      <StyledCardStack>
         <DxSecondaryTypography variant="h6">
           Soil, Moisture & Humidity Comparison
         </DxSecondaryTypography>
@@ -19,7 +18,7 @@ const SoilMoistureHumidity = () => {
           barRightFillColor="#82ca9d"
         /> */}
         </StyledChartBox>
-      </Stack>
+      </StyledCardStack>
     </StyledCard>
   );
 };
