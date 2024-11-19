@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx,json,css,md}",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d -build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
