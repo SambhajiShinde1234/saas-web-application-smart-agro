@@ -9,6 +9,15 @@ const App = () => {
       <Routes>
         <Route
           exact
+          path="/"
+          element={
+            <Layout>
+              <Dashboard />
+            </Layout>
+          }
+        />
+        <Route
+          exact
           path="/dashboard"
           element={
             <Layout>
