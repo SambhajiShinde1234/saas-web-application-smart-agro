@@ -15,15 +15,15 @@ import {
   StyledFlexCenter,
   StyledIconBox,
 } from '../../components/styled/styled';
-// import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
-// import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
+import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
+import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
 import HumbergureMenu from '../../components/icons/HumbergureMenu';
 import { useLocation } from 'react-router-dom';
 
 const WelcomeSection = () => {
   return (
     <Stack gap={0.5}>
-      <Typography
+      {/* <Typography
         style={{ fontFamily: 'cursive', fontSize: '1.7rem', fontWeight: '900' }}
       >
         Hello, Jeremy! 👋
@@ -37,12 +37,12 @@ const WelcomeSection = () => {
         }}
       >
         Welcome back to Smart Agro !
-      </Typography>
-      {/* <DxPrimaryTypography variant="h5">Hellow, Jeremy! 👋</DxPrimaryTypography>
+      </Typography> */}
+      <DxPrimaryTypography variant="h5">Hellow, Jeremy! 👋</DxPrimaryTypography>
 
       <DxSecondaryTypography variant="">
         Welcome back to Smart Agro !
-      </DxSecondaryTypography> */}
+      </DxSecondaryTypography>
     </Stack>
   );
 };
