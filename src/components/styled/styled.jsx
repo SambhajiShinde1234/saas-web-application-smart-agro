@@ -43,25 +43,28 @@ export const StyledFlexBetween = styled(Stack)(() => ({
 
 export const StyledPrimaryTypography = styled(Typography)(() => ({
   color: '#292A3B',
-  fontWeight: '900',
+  fontWeight: '700',
 }));
 
 export const StyledSecondaryTypography = styled(Typography)(() => ({
   color: '#A0A4A3',
-  fontWeight: '600',
+  fontWeight: '500',
 }));
 
 // sidebar
 
-export const StyledLogoBox = styled(Box)(() => ({
-  height: '7rem',
+export const StyledLogoBox = styled(Box)(({ theme }) => ({
+  margin: '2rem 0',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  [theme.breakpoints.down('sm')]: {
+    margin: '2rem 0 1rem 0',
+  },
 }));
 
 export const StyledLogo = styled('span')(() => ({
-  fontSize: '2.5rem',
+  fontSize: '2rem',
   fontWeight: '900',
 }));
 
@@ -77,7 +80,6 @@ export const StyledListeitemText = styled(Typography)(({ isactive }) => ({
   color: isactive ? '#FFF' : '#A0A4A3',
   fontWeight: '600',
   fontSize: '1rem',
-  fontFamily: 'monospace',
 }));
 
 export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({

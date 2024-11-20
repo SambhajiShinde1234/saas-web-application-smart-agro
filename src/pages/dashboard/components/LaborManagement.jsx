@@ -25,8 +25,8 @@ const LaborManagement = () => {
         <DxSecondaryTypography variant="h6">
           Labor Management
         </DxSecondaryTypography>
+        {/* <DxTable columns={tableColumns} data={LABOR_MANAGEMENT} /> */}
       </StyledCardStack>
-      <DxTable columns={tableColumns} data={LABOR_MANAGEMENT} />
     </StyledCard>
   );
 };
