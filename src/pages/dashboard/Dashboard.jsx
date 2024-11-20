@@ -13,7 +13,7 @@ import LaborManagement from './components/LaborManagement';
 const Dashboard = () => {
   return (
     <StyledCardStack>
-      <DxPrimaryTypography variant="h4">Dashboard</DxPrimaryTypography>
+      <DxPrimaryTypography variant="h5">Dashboard</DxPrimaryTypography>
       <Grid2 container spacing={2}>
         <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 4 }}>
           <WhetherTodays />

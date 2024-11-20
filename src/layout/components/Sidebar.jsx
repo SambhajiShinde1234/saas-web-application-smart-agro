@@ -100,7 +100,11 @@ const Sidebar = ({ handleDrawerToggle }) => {
                   </StyledListeitemIcon>
                   <ListItemText
                     primary={
-                      <StyledListeitemText>{menu.title}</StyledListeitemText>
+                      <StyledListeitemText
+                        isactive={menu.href === location.pathname}
+                      >
+                        {menu.title}
+                      </StyledListeitemText>
                     }
                     isactive={menu.href === location.pathname}
                   />

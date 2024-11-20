@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/dashboard/Dashboard';
 import Overview from './pages/overview/Overview';
 import Layout from './layout/layout';
+import Settings from './pages/settings/Settings';
 
 const App = () => {
   return (
@@ -31,6 +32,15 @@ const App = () => {
           element={
             <Layout>
               <Overview />
+            </Layout>
+          }
+        />
+        <Route
+          exact
+          path="/settings"
+          element={
+            <Layout>
+              <Settings />
             </Layout>
           }
         />
