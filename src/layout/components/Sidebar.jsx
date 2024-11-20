@@ -3,6 +3,7 @@ import DashboardIcon from '../../components/icons/DashboardIcon';
 import OverviewIcon from '../../components/icons/OverviewIcon';
 import SettingIcon from '../../components/icons/SettingIcon';
 import LogoutIcon from '../../components/icons/LogoutIcon';
+import HelpIcon from '../../components/icons/HelpIcon';
 import {
   StyledListeitemText,
   StyledLogo,
@@ -36,6 +37,12 @@ const EXTRA_MENUS = [
     title: 'Settings',
     icon: <SettingIcon />,
     href: '/settings',
+  },
+  {
+    id: 2,
+    title: 'Support',
+    icon: <HelpIcon />,
+    href: '/support',
   },
 ];
 

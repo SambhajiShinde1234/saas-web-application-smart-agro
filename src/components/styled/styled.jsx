@@ -90,6 +90,7 @@ export const StyledListeitemText = styled(Typography)(({ isactive }) => ({
   color: isactive ? '#FFF' : '#A0A4A3',
   fontWeight: '600',
   fontSize: '1rem',
+  textWrap: 'noWrap'
 }));
 
 export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({

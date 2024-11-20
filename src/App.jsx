@@ -3,6 +3,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Overview from './pages/overview/Overview';
 import Layout from './layout/layout';
 import Settings from './pages/settings/Settings';
+import Support from './pages/support/Support';
 
 const App = () => {
   return (
@@ -41,6 +42,15 @@ const App = () => {
           element={
             <Layout>
               <Settings />
+            </Layout>
+          }
+        />
+          <Route
+          exact
+          path="/support"
+          element={
+            <Layout>
+              <Support />
             </Layout>
           }
         />
