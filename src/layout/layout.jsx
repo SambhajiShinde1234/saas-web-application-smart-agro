@@ -33,12 +33,13 @@ const Layout = ({ children }) => {
       >
         <Sidebar handleDrawerToggle={handleDrawerToggle} />
       </StyledDrawer>
-      {/* Main Content */}
+      {/* Right side */}
       <StyledMainBox component="main" isMobileScreen={isMobileScreen}>
         <Box>
           {/* Top Navbar */}
           <Header handleDrawerToggle={handleDrawerToggle} />
         </Box>
+        {/* main content */}
         <StyledChildrenBox>{children}</StyledChildrenBox>
       </StyledMainBox>
     </StyledLayoutBox>
