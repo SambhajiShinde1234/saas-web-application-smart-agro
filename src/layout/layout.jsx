@@ -10,7 +10,7 @@ import {
   StyledMainBox,
 } from '../components/styled/styled';
 
-const drawerwidth = 240;
+const drawerwidth = 220;
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
