@@ -9,29 +9,32 @@ const WhetherTodays = () => {
     <StyledCard>
       <StyledCardStack>
         <DxSecondaryTypography variant="h6">
-          Weather&apos;s Today
+          Today&apos;s Weather
         </DxSecondaryTypography>
         <Grid2 container spacing={2}>
           <Grid2 size={{ xs: 6 }}>
-            <Stack sx={{ gap: '1rem' }}>
+            <StyledCardStack>
               <Stack>
-                <DxPrimaryTypography variant="h6">
+                <DxSecondaryTypography variant="">
+                  {FARMS[0].todaysWhether.date}
+                </DxSecondaryTypography>
+                <DxPrimaryTypography variant="">
                   {FARMS[0].todaysWhether.day}
                 </DxPrimaryTypography>
-                <DxSecondaryTypography variant="">
-                  ({FARMS[0].todaysWhether.date})
-                </DxSecondaryTypography>
               </Stack>
               <Stack>
-                <DxPrimaryTypography variant="h4">
+                <DxSecondaryTypography variant="">
+                  Temparature
+                </DxSecondaryTypography>
+                <DxPrimaryTypography variant="">
                   {FARMS[0].todaysWhether.temparature.value} <sup>o</sup>
                   {FARMS[0].todaysWhether.temparature.unit}
                 </DxPrimaryTypography>
               </Stack>
-            </Stack>
+            </StyledCardStack>
           </Grid2>
           <Grid2 size={{ xs: 6 }}>
-            <Stack sx={{ gap: '1rem' }}>
+            <StyledCardStack>
               <Stack sx={{ gap: '.1rem' }}>
                 <DxSecondaryTypography>Wind speed</DxSecondaryTypography>
                 <DxPrimaryTypography variant="">
@@ -46,7 +49,7 @@ const WhetherTodays = () => {
                   {FARMS[0].todaysWhether.humidity.unit}
                 </DxPrimaryTypography>
               </Stack>
-            </Stack>
+            </StyledCardStack>
           </Grid2>
         </Grid2>
       </StyledCardStack>

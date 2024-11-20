@@ -1,9 +1,9 @@
 import { StyledSecondaryTypography } from '../styled/styled';
 
 // eslint-disable-next-line react/prop-types
-const DxSecondaryTypography = ({ children, variant }) => {
+const DxSecondaryTypography = ({ children, variant, sx }) => {
   return (
-    <StyledSecondaryTypography variant={variant}>
+    <StyledSecondaryTypography variant={variant} {...sx}>
       {children}
     </StyledSecondaryTypography>
   );

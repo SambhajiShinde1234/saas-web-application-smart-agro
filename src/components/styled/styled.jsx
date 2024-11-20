@@ -90,7 +90,7 @@ export const StyledListeitemText = styled(Typography)(({ isactive }) => ({
   color: isactive ? '#FFF' : '#A0A4A3',
   fontWeight: '600',
   fontSize: '1rem',
-  textWrap: 'noWrap'
+  textWrap: 'noWrap',
 }));
 
 export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({
@@ -134,13 +134,19 @@ export const StyledLayoutBox = styled(Box)(({ isMobileScreen }) => ({
   margin: isMobileScreen ? '0rem' : '1rem',
 }));
 
-export const StyledDrawer = styled(Drawer)(({ drawerwidth }) => ({
-  width: drawerwidth,
+export const StyledDrawer = styled(Drawer)(({ theme }) => ({
+  width: '220px',
   flexShrink: 0,
   '& .MuiDrawer-paper': {
-    width: drawerwidth,
+    width: '240px',
     boxSizing: 'border-box',
     border: 'none',
+    [theme.breakpoints.down('md')]: {
+      width: '280px',
+    },
+  },
+  [theme.breakpoints.down('md')]: {
+    width: '280px',
   },
 }));
 

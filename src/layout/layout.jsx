@@ -10,8 +10,6 @@ import {
   StyledMainBox,
 } from '../components/styled/styled';
 
-const drawerwidth = 220;
-
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
@@ -29,7 +27,6 @@ const Layout = ({ children }) => {
         open={open}
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
-        drawerwidth={drawerwidth}
       >
         <Sidebar handleDrawerToggle={handleDrawerToggle} />
       </StyledDrawer>

@@ -2,7 +2,7 @@ import {
   Box,
   IconButton,
   Stack,
-  Typography,
+  // Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -23,23 +23,9 @@ import { useLocation } from 'react-router-dom';
 const WelcomeSection = () => {
   return (
     <Stack gap={0.5}>
-      {/* <Typography
-        style={{ fontFamily: 'cursive', fontSize: '1.7rem', fontWeight: '900' }}
-      >
-        Hello, Jeremy! 👋
-      </Typography>
-      <Typography
-        style={{
-          fontFamily: 'cursive',
-          fontSize: '1.1rem',
-          fontWeight: '400',
-          color: '#A0A4A3',
-        }}
-      >
-        Welcome back to Smart Agro !
-      </Typography> */}
-      <DxPrimaryTypography variant="h5">Hellow, Jeremy! 👋</DxPrimaryTypography>
-
+      <DxPrimaryTypography variant="h5" sx={{ fontFamily: 'cursive' }}>
+        Hellow, Jeremy! 👋
+      </DxPrimaryTypography>
       <DxSecondaryTypography variant="">
         Welcome back to Smart Agro !
       </DxSecondaryTypography>

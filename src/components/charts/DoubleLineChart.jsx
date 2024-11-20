@@ -24,6 +24,7 @@ const DoubleLineChart = ({
   right = -20,
   left = -30,
   bottom = 5,
+  fontSize = '0.7rem',
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -37,12 +38,18 @@ const DoubleLineChart = ({
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxisDataKey} />
-        <YAxis yAxisId="left" orientation="left" stroke={lineFirstFillColor} />
+        <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
+        <YAxis
+          yAxisId="left"
+          orientation="left"
+          stroke={lineFirstFillColor}
+          style={{ fontSize: `${fontSize}` }}
+        />
         <YAxis
           yAxisId="right"
           orientation="right"
           stroke={lineSecondFillColor}
+          style={{ fontSize: `${fontSize}` }}
         />
         <Tooltip />
         <Legend iconType={legendIconType} />

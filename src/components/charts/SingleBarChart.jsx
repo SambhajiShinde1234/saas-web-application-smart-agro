@@ -20,6 +20,7 @@ const SingleBarChart = ({
   right = -20,
   left = -30,
   bottom = 5,
+  fontSize = '0.7rem',
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -34,8 +35,8 @@ const SingleBarChart = ({
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxisDataKey} />
-        <YAxis stroke={barFillColor} />
+        <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
+        <YAxis stroke={barFillColor} style={{ fontSize: `${fontSize}` }} />
         <Tooltip />
         <Legend iconType={legendIconType} />
         <Bar dataKey={barDataKey} fill={barFillColor} radius={[50, 50, 0, 0]} />

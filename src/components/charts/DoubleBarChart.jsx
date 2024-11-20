@@ -21,6 +21,7 @@ const DoubleBarChart = ({
   right = -20,
   left = -30,
   bottom = 5,
+  fontSize = '0.7rem',
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -35,9 +36,19 @@ const DoubleBarChart = ({
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxisDataKey} />
-        <YAxis yAxisId="left" orientation="left" stroke={barLeftFillColor} />
-        <YAxis yAxisId="right" orientation="right" stroke={barRightFillColor} />
+        <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
+        <YAxis
+          yAxisId="left"
+          orientation="left"
+          stroke={barLeftFillColor}
+          style={{ fontSize: `${fontSize}` }}
+        />
+        <YAxis
+          yAxisId="right"
+          orientation="right"
+          stroke={barRightFillColor}
+          style={{ fontSize: `${fontSize}` }}
+        />
         <Tooltip />
         <Legend iconType={legendIconType} />
         <Bar

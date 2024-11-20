@@ -1,9 +1,9 @@
 import { StyledPrimaryTypography } from '../styled/styled';
 
 // eslint-disable-next-line react/prop-types
-const DxPrimaryTypography = ({ children, variant }) => {
+const DxPrimaryTypography = ({ children, variant, sx }) => {
   return (
-    <StyledPrimaryTypography variant={variant}>
+    <StyledPrimaryTypography variant={variant} {...sx}>
       {children}
     </StyledPrimaryTypography>
   );

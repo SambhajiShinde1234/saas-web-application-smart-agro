@@ -22,6 +22,7 @@ const SingleLineChart = ({
   right = -20,
   left = -30,
   bottom = 5,
+  fontSize = '0.7rem',
 }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -35,8 +36,8 @@ const SingleLineChart = ({
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxisDataKey} />
-        <YAxis stroke={lineFillColor} />
+        <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
+        <YAxis stroke={lineFillColor} style={{ fontSize: `${fontSize}` }} />
         <Tooltip />
         <Legend iconType={legendIconType} />
         <Line
