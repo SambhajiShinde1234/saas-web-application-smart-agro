@@ -17,7 +17,7 @@ const DxTable = ({ columns, data, tableHeadBgColor = '#E8EBF0' }) => {
           <TableRow>
             {columns.map((item, index) => (
               <TableCell key={index} align={item.align} width={item.width}>
-                <Typography variant="">{item.columnName}</Typography>
+                <Typography variant="" noWrap>{item.columnName}</Typography>
               </TableCell>
             ))}
           </TableRow>
@@ -27,7 +27,7 @@ const DxTable = ({ columns, data, tableHeadBgColor = '#E8EBF0' }) => {
             <TableRow key={index} hover>
               {columns.map((column, index) => (
                 <TableCell key={index} align={column.align}>
-                  <Typography variant="">{row[column.field]}</Typography>
+                  <Typography variant="" noWrap>{row[column.field]}</Typography>
                 </TableCell>
               ))}
             </TableRow>

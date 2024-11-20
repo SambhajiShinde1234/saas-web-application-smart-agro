@@ -195,6 +195,24 @@ export const LABOR_MANAGEMENT = [
     output: '15 acres planted',
     efficiency: '1.875 acres/worker-hour',
   },
+  {
+    task: 'Harvesting',
+    date: '2024-11-02',
+    workers: 10,
+    cost: 500,
+    duration: '6 hours',
+    output: '10 tons',
+    efficiency: '1.67 tons/worker-hour',
+  },
+  {
+    task: 'Irrigation',
+    date: '2024-11-03',
+    workers: 5,
+    cost: 250,
+    duration: '3 hours',
+    output: 'N/A',
+    efficiency: '1 field/hour',
+  },
 ];
 
 export const ALERT_WITH_NOTIFICATIONS = [
