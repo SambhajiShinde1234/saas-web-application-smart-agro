@@ -24,16 +24,16 @@ const Dashboard = () => {
         <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 4 }}>
           <FarmOverview />
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 8 }}>
+        <Grid2 size={{ xs: 12, lg: 8 }}>
           <FertilizerPesticidesCompare />
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 4 }}>
+        <Grid2 size={{ xs: 12, lg: 4 }}>
           <YearlyYieldTrends />
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 8 }}>
+        <Grid2 size={{ xs: 12, lg: 8 }}>
           <TempratureHumidity />
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 4 }}>
+        <Grid2 size={{ xs: 12, lg: 4 }}>
           <SoilMoisture />
         </Grid2>
         <Grid2 size={{ xs: 12 }}>

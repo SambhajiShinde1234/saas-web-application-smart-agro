@@ -6,7 +6,17 @@ import {
   Drawer,
   ListItemButton,
   ListItemIcon,
+  TableContainer,
 } from '@mui/material';
+
+// ui 
+// table
+
+export const StyledTableContainer = styled(TableContainer)(() => ({
+  overflowX: 'auto',
+  maxWidth: '375px',
+  minWidth: '100%',
+}));
 
 // charts
 
@@ -108,12 +118,15 @@ export const StyledDrawer = styled(Drawer)(({ drawerwidth }) => ({
   },
 }));
 
-export const StyledMainBox = styled(Box)(({ drawerwidth, isMobileScreen }) => ({
+export const StyledMainBox = styled(Box)(({ drawerwidth, isMobileScreen, theme }) => ({
   flexGrow: 1,
   width: `calc(100% - ${drawerwidth}px)`,
   background: '#F2F8F8',
   borderRadius: isMobileScreen ? '0px' : '40px',
   padding: '1.5rem',
+  [theme.breakpoints.down('md')] :{
+    padding: '1rem'
+  }
 }));
 
 export const StyledChildrenBox = styled(Box)(() => ({

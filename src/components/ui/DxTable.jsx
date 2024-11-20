@@ -1,25 +1,13 @@
 /* eslint-disable react/prop-types */
 import {
-  styled,
   Table,
   TableBody,
   TableCell,
-  TableContainer,
   TableHead,
   TableRow,
   Typography,
 } from '@mui/material';
-
-const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
-  overflowX: 'auto',
-  maxWidth: '450px',
-  [theme.breakpoints.up('xs')]: {
-    maxWidth: '600px',
-  },
-  [theme.breakpoints.up('md')]: {
-    maxWidth: '100%',
-  },
-}));
+import { StyledTableContainer } from '../styled/styled';
 
 const DxTable = ({ columns, data, tableHeadBgColor = '#E8EBF0' }) => {
   return (
