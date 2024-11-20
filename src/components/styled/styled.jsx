@@ -9,7 +9,7 @@ import {
   TableContainer,
 } from '@mui/material';
 
-// ui 
+// ui
 // table
 
 export const StyledTableContainer = styled(TableContainer)(() => ({
@@ -100,6 +100,31 @@ export const StyledListItemButton = styled(ListItemButton)(({ isactive }) => ({
   },
 }));
 
+export const StyledListsStack = styled(Stack)(() => ({
+  justifyContent: 'space-between',
+  height: '100%',
+  overflowY: 'hidden',
+}));
+
+export const StyledTopListBox = styled(Box)(() => ({
+  overflowY: 'auto',
+  '&::-webkit-scrollbar': {
+    width: '0px', // Width of the scrollbar
+  },
+  '&::-webkit-scrollbar-thumb': {
+    backgroundColor: 'green', // Color of the scrollbar thumb
+    borderRadius: '10px', // Rounded corners for the thumb
+  },
+  '&::-webkit-scrollbar-thumb:hover': {
+    backgroundColor: 'transparent', // Darker color when hovered
+  },
+  '&::-webkit-scrollbar-track': {
+    backgroundColor: 'transparent', // Background of the scrollbar track
+  },
+  scrollbarWidth: 'thin', // For Firefox
+  scrollbarColor: 'red', // Thumb and track color for Firefox
+}));
+
 // layout
 
 export const StyledLayoutBox = styled(Box)(({ isMobileScreen }) => ({
@@ -118,16 +143,18 @@ export const StyledDrawer = styled(Drawer)(({ drawerwidth }) => ({
   },
 }));
 
-export const StyledMainBox = styled(Box)(({ drawerwidth, isMobileScreen, theme }) => ({
-  flexGrow: 1,
-  width: `calc(100% - ${drawerwidth}px)`,
-  background: '#F2F8F8',
-  borderRadius: isMobileScreen ? '0px' : '40px',
-  padding: '1.5rem',
-  [theme.breakpoints.down('md')] :{
-    padding: '1rem'
-  }
-}));
+export const StyledMainBox = styled(Box)(
+  ({ drawerwidth, isMobileScreen, theme }) => ({
+    flexGrow: 1,
+    width: `calc(100% - ${drawerwidth}px)`,
+    background: '#F2F8F8',
+    borderRadius: isMobileScreen ? '0px' : '40px',
+    padding: '1.5rem',
+    [theme.breakpoints.down('md')]: {
+      padding: '1rem',
+    },
+  })
+);
 
 export const StyledChildrenBox = styled(Box)(() => ({
   margin: '2rem 0 0 0 ',
