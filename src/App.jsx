@@ -5,55 +5,46 @@ import Layout from './layout/layout';
 import Settings from './pages/settings/Settings';
 import Support from './pages/support/Support';
 
+const ROUTES = [
+  {
+    id: 1,
+    path: '/',
+    component: <Dashboard />,
+  },
+  {
+    id: 1,
+    path: '/dashboard',
+    component: <Dashboard />,
+  },
+  {
+    id: 1,
+    path: '/overview',
+    component: <Overview />,
+  },
+  {
+    id: 1,
+    path: '/settings',
+    component: <Settings />,
+  },
+  {
+    id: 1,
+    path: '/support',
+    component: <Support />,
+  },
+];
+
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Layout>
-              <Dashboard />
-            </Layout>
-          }
-        />
-        <Route
-          exact
-          path="/dashboard"
-          element={
-            <Layout>
-              <Dashboard />
-            </Layout>
-          }
-        />
-        <Route
-          exact
-          path="/overview"
-          element={
-            <Layout>
-              <Overview />
-            </Layout>
-          }
-        />
-        <Route
-          exact
-          path="/settings"
-          element={
-            <Layout>
-              <Settings />
-            </Layout>
-          }
-        />
+        {ROUTES.map((item, index) => (
           <Route
-          exact
-          path="/support"
-          element={
-            <Layout>
-              <Support />
-            </Layout>
-          }
-        />
+            key={index}
+            exact
+            path={item.path}
+            element={<Layout>{item.component}</Layout>}
+          />
+        ))}
       </Routes>
     </Router>
   );
