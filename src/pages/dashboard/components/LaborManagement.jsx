@@ -4,16 +4,16 @@ import { LABOR_MANAGEMENT } from '../../../dummy-data/FarmData';
 import DxTable from '../../../components/ui/DxTable';
 
 const tableColumns = [
-  { columnName: 'Task', field: 'task', align: 'center', width: 100 },
-  { columnName: 'Date', field: 'date', align: 'center', width: 150 },
+  { columnName: 'Task', field: 'task', align: 'left', width: 150 },
+  { columnName: 'Date', field: 'date', align: 'left', width: 150 },
   { columnName: 'Workers', field: 'workers', align: 'center', width: 150 },
-  { columnName: 'Cost ($)', field: 'cost', align: 'center', width: 120 },
-  { columnName: 'Duration', field: 'duration', align: 'center', width: 120 },
-  { columnName: 'Output', field: 'output', align: 'center', width: 120 },
+  { columnName: 'Cost ($)', field: 'cost', align: 'center', width: 150 },
+  { columnName: 'Duration', field: 'duration', align: 'left', width: 150 },
+  { columnName: 'Output', field: 'output', align: 'left', width: 150 },
   {
     columnName: 'Efficiency',
     field: 'efficiency',
-    align: 'center',
+    align: 'left',
     width: 150,
   },
 ];

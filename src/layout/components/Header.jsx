@@ -44,7 +44,7 @@ const Header = ({ handleDrawerToggle }) => {
               Hellow, Jeremy! 👋
             </DxPrimaryTypography>
             <DxSecondaryTypography variant="">
-              Welcome back to podium
+              Welcome back to farm podium
             </DxSecondaryTypography>
           </Stack>
           <StyledFlexCenter>
