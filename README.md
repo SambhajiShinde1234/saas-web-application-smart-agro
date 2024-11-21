@@ -1,6 +1,6 @@
 # SaaS Web Application - SmartAgro
 
-This is a modern, responsive SaaS (Software as a Service) web application built using **React**, **Material-UI**, **recharts** and **Styled Components**. The application is optimized for mobile and desktop devices, ensuring an excellent user experience across all screen sizes.
+This is a modern, responsive SaaS (Software as a Service) web application built using **React**, **Material-UI**, **Recharts** and **Styled Components**. The application is optimized for mobile and desktop devices, ensuring an excellent user experience across all screen sizes.
 
 ---
 
@@ -20,10 +20,6 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 - **Tooling**: Prettier, ESLint
 - **Package Manager**: npm
 - **Deploy**: Github pages
-
----
-
-## Screenshots
 
 ---
 
@@ -54,7 +50,7 @@ Make sure you have the following installed:
 
    ```
 
-3. **install depencies**:
+3. **Install Dependencies**:
 
    ```bash
    npm install
@@ -69,3 +65,19 @@ Make sure you have the following installed:
    ```
 
    This command starts the app in development mode. Open http://localhost:5173 in your browser to view it.
+
+5. **Build for Production**:
+
+   ```bash
+   npm run build
+
+   ```
+
+   This command creates an optimized production build in the dist folder.
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- Email: mr.sam.shinde@gmail.com
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sambhajishinde99/)
