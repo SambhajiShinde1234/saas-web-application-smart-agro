@@ -1,4 +1,8 @@
-import { StyledCard, StyledCardStack, StyledChartBox } from '../../../components/styled/styled';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledChartBox,
+} from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import SingleBarChart from '../../../components/charts/SingleBarChart';
 import { FARMS } from '../../../dummy-data/FarmData';
@@ -16,6 +20,7 @@ const YearlyYieldTrends = () => {
             xAxisDataKey="year"
             barDataKey="production"
             barFillColor="#4C8C52"
+            barActiveColor="#3A6A3F"
           />
         </StyledChartBox>
       </StyledCardStack>

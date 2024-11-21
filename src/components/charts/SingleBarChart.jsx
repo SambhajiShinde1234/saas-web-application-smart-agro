@@ -15,6 +15,7 @@ const SingleBarChart = ({
   xAxisDataKey,
   barDataKey,
   barFillColor = '#82ca9d',
+  barActiveColor = '#3A6A3F',
   legendIconType = 'circle',
   top = 20,
   right = -20,
@@ -37,9 +38,14 @@ const SingleBarChart = ({
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
         <YAxis stroke={barFillColor} style={{ fontSize: `${fontSize}` }} />
-        <Tooltip />
+        <Tooltip cursor={{ fill: 'transparent'}} />
         <Legend iconType={legendIconType} />
-        <Bar dataKey={barDataKey} fill={barFillColor} radius={[50, 50, 0, 0]} />
+        <Bar
+          dataKey={barDataKey}
+          fill={barFillColor}
+          activeBar={{ fill: barActiveColor }}
+          radius={[50, 50, 0, 0]}
+        />
       </BarChart>
     </ResponsiveContainer>
   );
