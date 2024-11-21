@@ -1,4 +1,8 @@
-import { StyledCard, StyledCardStack, StyledChartBox } from '../../../components/styled/styled';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledChartBox,
+} from '../../../components/styled/styled';
 import DxSecondaryTypography from '../../../components/ui/DxSecondaryTypography';
 import { FARMS } from '../../../dummy-data/FarmData';
 import DoubleBarChart from '../../../components/charts/DoubleBarChart';
@@ -17,7 +21,9 @@ const FertilizerPesticidesCompare = () => {
             barLeftDataKey="pesticide"
             barRightDataKey="fertilizer"
             barLeftFillColor="#8884d8"
+            barLeftActiveColor="#6053a8"
             barRightFillColor="#82ca9d"
+            barRightActiveColor="#5a9c6f"
           />
         </StyledChartBox>
       </StyledCardStack>

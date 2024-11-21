@@ -14,8 +14,10 @@ const DoubleBarChart = ({
   xAxisDataKey,
   barLeftDataKey,
   barRightDataKey,
-  barLeftFillColor = '#82ca9d',
+  barLeftFillColor = '#8884d8',
+  barLeftActiveColor = '#6053a8',
   barRightFillColor = '#82ca9d',
+  barRightActiveColor = '#5a9c6f',
   legendIconType = 'circle',
   top = 20,
   right = -20,
@@ -49,19 +51,21 @@ const DoubleBarChart = ({
           stroke={barRightFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip />
+        <Tooltip cursor={{ fill: 'transparent' }} />
         <Legend iconType={legendIconType} />
         <Bar
           dataKey={barLeftDataKey}
           yAxisId="left"
           fill={barLeftFillColor}
           radius={[50, 50, 0, 0]}
+          activeBar={{ fill: barLeftActiveColor }}
         />
         <Bar
           dataKey={barRightDataKey}
           yAxisId="right"
           fill={barRightFillColor}
           radius={[50, 50, 0, 0]}
+          activeBar={{ fill: barRightActiveColor }}
         />
       </BarChart>
     </ResponsiveContainer>
