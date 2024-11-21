@@ -79,5 +79,5 @@ Make sure you have the following installed:
 
 If you have any questions or feedback, feel free to reach out:
 
-- Email: mr.sam.shinde@gmail.com
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sambhajishinde99/)
+- [Email](mr.sam.shinde@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/sambhajishinde99/)
