@@ -1,6 +1,6 @@
-# SaaS Web Application
+# SaaS Web Application - SmartAgro
 
-This is a modern, responsive SaaS (Software as a Service) web application built using **React**, **Material-UI**, **rechartS** and **Styled Components**. The application is optimized for mobile and desktop devices, ensuring an excellent user experience across all screen sizes.
+This is a modern, responsive SaaS (Software as a Service) web application built using **React**, **Material-UI**, **recharts** and **Styled Components**. The application is optimized for mobile and desktop devices, ensuring an excellent user experience across all screen sizes.
 
 ---
 
@@ -9,17 +9,17 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 - **Responsive Design**: Fully optimized for both mobile and desktop devices.
 - **React & Material-UI**: Leverages the power of Material-UI components for a clean, professional UI.
 - **Styled Components**: Efficient and maintainable styling using styled-components.
-- **High Performance**: Built with best practices for smooth and fast performance.
+- **High Performance**: Built using the Recharts library for creating visually appealing and interactive charts to display data effectively.
 - **Modular Code**: Organized and reusable components to make the app scalable.
 
 ---
 
 ## Tech Stack
 
-- **Frontend**: React, Material-UI, Styled Components
-- **State Management**: Context API or any state library (if applicable)
+- **Frontend**: React, Material-UI, Styled Components, Recharts
 - **Tooling**: Prettier, ESLint
 - **Package Manager**: npm
+- **Deploy**: Github pages
 
 ---
 
@@ -48,10 +48,12 @@ Make sure you have the following installed:
    ```
 
 2. **Navigate to the Project Directory**:
+
    ```bash
    cd saas-reacjs
 
    ```
+
 3. **install depencies**:
 
    ```bash
@@ -64,5 +66,6 @@ Make sure you have the following installed:
    ```bash
    npm run dev
 
-   This command starts the app in development mode. Open http://localhost:5173 in your browser to view it.
    ```
+
+   This command starts the app in development mode. Open http://localhost:5173 in your browser to view it.
