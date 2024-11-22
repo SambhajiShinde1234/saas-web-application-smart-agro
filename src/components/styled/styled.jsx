@@ -7,9 +7,34 @@ import {
   ListItemButton,
   ListItemIcon,
   TableContainer,
+  Tabs,
+  Tab,
 } from '@mui/material';
 
 // ui
+
+// tabs
+
+export const StyledTabs = styled(Tabs)(() => ({
+  '& .MuiTabs-indicator': {
+    height: 0,
+  },
+  '& .Mui-selected': {
+    color: 'rgba(31, 194, 139, 1) !important',
+    background: 'rgba(31, 194, 139, 0.13)',
+    border: '1px solid rgba(31, 194, 139, 1)',
+  },
+}));
+
+export const StyledTab = styled(Tab)(() => ({
+  border: '1px solid rgba(31, 194, 139, 0.5)',
+  margin: '5px',
+  borderRadius: '50px',
+  fontSize: '.8rem',
+  textTransform: 'none',
+  minHeight: '40px',
+}));
+
 // table
 
 export const StyledTableContainer = styled(TableContainer)(() => ({

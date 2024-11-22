@@ -1,5 +1,9 @@
-import { Tab, Tabs } from '@mui/material';
-import { StyledCard, StyledCardStack } from '../../components/styled/styled';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledTab,
+  StyledTabs,
+} from '../../components/styled/styled';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
 import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
@@ -9,7 +13,7 @@ const inventoryTableColumns = {
   seeds: [
     { columnName: 'Name', field: 'itemName', align: 'left', width: 150 },
     {
-      columnName: 'Available Quantity (Bags)',
+      columnName: 'Available (Bags)',
       field: 'quantityAvailable',
       align: 'center',
       width: 150,
@@ -23,7 +27,7 @@ const inventoryTableColumns = {
     {
       columnName: 'Expiry Date',
       field: 'expiryDate',
-      align: 'center',
+      align: 'left',
       width: 150,
     },
     { columnName: 'Supplier', field: 'supplier', align: 'left', width: 150 },
@@ -37,7 +41,7 @@ const inventoryTableColumns = {
   fertilizers: [
     { columnName: 'Name', field: 'itemName', align: 'left', width: 150 },
     {
-      columnName: 'Available Quantity (Bags)',
+      columnName: 'Available (Bags)',
       field: 'quantityAvailable',
       align: 'center',
       width: 150,
@@ -51,7 +55,7 @@ const inventoryTableColumns = {
     {
       columnName: 'Expiry Date',
       field: 'expiryDate',
-      align: 'center',
+      align: 'left',
       width: 150,
     },
     { columnName: 'Supplier', field: 'supplier', align: 'left', width: 150 },
@@ -65,7 +69,7 @@ const inventoryTableColumns = {
   pesticides: [
     { columnName: 'Name', field: 'itemName', align: 'left', width: 150 },
     {
-      columnName: 'Available Quantity (Bags)',
+      columnName: 'Available (Bags)',
       field: 'quantityAvailable',
       align: 'center',
       width: 150,
@@ -79,7 +83,7 @@ const inventoryTableColumns = {
     {
       columnName: 'Expiry Date',
       field: 'expiryDate',
-      align: 'center',
+      align: 'left',
       width: 150,
     },
     { columnName: 'Supplier', field: 'supplier', align: 'left', width: 150 },
@@ -93,7 +97,7 @@ const inventoryTableColumns = {
   machineryTools: [
     { columnName: 'Name', field: 'itemName', align: 'left', width: 150 },
     {
-      columnName: 'Available Quantity (Units)',
+      columnName: 'Available (Units)',
       field: 'quantityAvailable',
       align: 'center',
       width: 150,
@@ -102,7 +106,7 @@ const inventoryTableColumns = {
     {
       columnName: 'Purchased Date',
       field: 'purchaseDate',
-      align: 'center',
+      align: 'left',
       width: 150,
     },
     { columnName: 'Supplier', field: 'supplier', align: 'left', width: 150 },
@@ -146,15 +150,15 @@ const Inventory = () => {
       </DxPrimaryTypography>
       <StyledCard>
         <StyledCardStack>
-          <Tabs value={activeTab} onChange={handleTabChange}>
+          <StyledTabs value={activeTab} onChange={handleTabChange}>
             {inventoryCategories.map((category, index) => (
-              <Tab
+              <StyledTab
                 key={index}
                 label={`${category.icon} ${category.categoryName}`}
                 value={category.value}
               />
             ))}
-          </Tabs>
+          </StyledTabs>
           <DxTable
             columns={inventoryTableColumns[activeTab]}
             data={INVENTORY_DATA[activeTab]}
