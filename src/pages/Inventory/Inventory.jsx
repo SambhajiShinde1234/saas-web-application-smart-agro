@@ -1,7 +1,12 @@
-import { StyledCardStack } from '../../components/styled/styled';
+import { Select, Tab, Tabs } from '@mui/material';
+import {
+  StyledCardStack,
+  StyledFlexBetween,
+} from '../../components/styled/styled';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
 import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
+import { useState } from 'react';
 
 const inventoryTableColumns = {
   seeds: [
@@ -108,12 +113,50 @@ const inventoryTableColumns = {
   ],
 };
 
+const inventoryCategories = [
+  {
+    categoryName: 'Seeds',
+    value: 'seeds',
+    itemCount: 10,
+    icon: '🌱',
+  },
+  {
+    categoryName: 'Fertilizers',
+    value: 'fertilizers',
+    itemCount: 8,
+    icon: '🌾',
+  },
+  { categoryName: 'Pesticides', value: 'pesticides', itemCount: 5, icon: '🧴' },
+  {
+    categoryName: 'Machinery/Tools',
+    value: 'machineryTools',
+    itemCount: 15,
+    icon: '🚜',
+  },
+];
+
 const Inventory = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [selectedCategory, setselectedCategory] = useState('seeds');
+  
+  const handleTabChange = (event, newValue) => {
+    setActiveTab(newValue);
+  };
+
   return (
     <StyledCardStack>
       <DxPrimaryTypography variant="h5">
         Inventory Mangement
       </DxPrimaryTypography>
+
+      <Tabs value={activeTab} onChange={handleTabChange} centered>
+        {inventoryCategories.map((category, index) => (
+          <Tab
+            key={index}
+            label={`${category.icon} ${category.categoryName}`}
+          />
+        ))}
+      </Tabs>
 
       <DxTable
         columns={inventoryTableColumns['seeds']}
