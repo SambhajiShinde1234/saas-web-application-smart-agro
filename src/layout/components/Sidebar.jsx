@@ -4,6 +4,7 @@ import OverviewIcon from '../../components/icons/OverviewIcon';
 import SettingIcon from '../../components/icons/SettingIcon';
 import LogoutIcon from '../../components/icons/LogoutIcon';
 import HelpIcon from '../../components/icons/HelpIcon';
+import InventoryIcon from '../../components/icons/InventoryIcon';
 import {
   StyledListeitemText,
   StyledLogo,
@@ -28,6 +29,12 @@ const MENUS = [
     title: 'Dashboard',
     icon: <OverviewIcon />,
     href: '/dashboard',
+  },
+  {
+    id: 3,
+    title: 'Inventory',
+    icon: <InventoryIcon />,
+    href: '/inventory',
   },
 ];
 
