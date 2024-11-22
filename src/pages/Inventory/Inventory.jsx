@@ -3,7 +3,9 @@ import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 const Inventory = () => {
   return (
     <StyledCardStack>
-      <DxPrimaryTypography>Inventory Mangement</DxPrimaryTypography>
+      <DxPrimaryTypography variant="h5">
+        Inventory Mangement
+      </DxPrimaryTypography>
     </StyledCardStack>
   );
 };
