@@ -1,11 +1,7 @@
-import {
-  StyledCard,
-  StyledCardStack,
-  StyledTab,
-  StyledTabs,
-} from '../../components/styled/styled';
+import { StyledCard, StyledCardStack } from '../../components/styled/styled';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
+import DxTabs from '../../components/ui/DxTabs';
 import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
 import { useState } from 'react';
 
@@ -116,20 +112,20 @@ const inventoryTableColumns = {
 
 const inventoryCategories = [
   {
-    categoryName: 'Seeds',
+    label: 'Seeds',
     value: 'seeds',
     itemCount: 10,
     icon: '🌱',
   },
   {
-    categoryName: 'Fertilizers',
+    label: 'Fertilizers',
     value: 'fertilizers',
     itemCount: 8,
     icon: '🌾',
   },
-  { categoryName: 'Pesticides', value: 'pesticides', itemCount: 5, icon: '🧴' },
+  { label: 'Pesticides', value: 'pesticides', itemCount: 5, icon: '🧴' },
   {
-    categoryName: 'Machinery/Tools',
+    label: 'Machinery/Tools',
     value: 'machineryTools',
     itemCount: 15,
     icon: '🚜',
@@ -150,15 +146,11 @@ const Inventory = () => {
       </DxPrimaryTypography>
       <StyledCard>
         <StyledCardStack>
-          <StyledTabs value={activeTab} onChange={handleTabChange}>
-            {inventoryCategories.map((category, index) => (
-              <StyledTab
-                key={index}
-                label={`${category.icon} ${category.categoryName}`}
-                value={category.value}
-              />
-            ))}
-          </StyledTabs>
+          <DxTabs
+            tabsData={inventoryCategories}
+            activeTab={activeTab}
+            handleTabChange={handleTabChange}
+          />
           <DxTable
             columns={inventoryTableColumns[activeTab]}
             data={INVENTORY_DATA[activeTab]}
