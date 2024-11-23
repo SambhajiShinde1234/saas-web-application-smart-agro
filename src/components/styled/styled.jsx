@@ -10,12 +10,35 @@ import {
   Tabs,
   Tab,
   Button,
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  Select
 } from '@mui/material';
 
 // ui
 
-// button
+// form
+export const StyledFormControl = styled(FormControl)(({ theme }) => ({
+ 
+}));
 
+export const StyledFormHelperText = styled(FormHelperText)(({ theme }) => ({
+ 
+}));
+
+export const TextFieldsWrapper = styled(FormHelperText)(({ theme }) => ({
+ 
+}));
+
+export const StyledLabel = styled(InputLabel)(({ theme }) => ({
+ 
+}));
+
+export const StyledSelect = styled(Select)(({ theme }) => ({
+ 
+}));
+// button
 export const StyledButton = styled(Button)(({ theme }) => ({
   textTransform: 'none',
   padding: '10px 20px',
@@ -29,7 +52,6 @@ export const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 // tabs
-
 export const StyledTabs = styled(Tabs)(() => ({
   '& .MuiTabs-indicator': {
     height: 0,
@@ -54,7 +76,6 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
 }));
 
 // table
-
 export const StyledTableContainer = styled(TableContainer)(() => ({
   overflowX: 'auto',
   maxWidth: '375px',
@@ -62,13 +83,11 @@ export const StyledTableContainer = styled(TableContainer)(() => ({
 }));
 
 // charts
-
 export const StyledChartBox = styled(Box)(() => ({
   height: '300px',
 }));
 
 // icons
-
 export const StyledIconBox = styled(Box)(() => ({
   background: '#FFF',
   borderRadius: '50px',
@@ -77,7 +96,6 @@ export const StyledIconBox = styled(Box)(() => ({
 }));
 
 // flex
-
 export const StyledFlexCenter = styled(Stack)(() => ({
   flexDirection: 'row',
   alignItems: 'center',
@@ -93,7 +111,6 @@ export const StyledFlexBetween = styled(Stack)(() => ({
 }));
 
 // typography
-
 export const StyledPrimaryTypography = styled(Typography)(() => ({
   color: '#292A3B',
   fontWeight: '700',
@@ -105,7 +122,6 @@ export const StyledSecondaryTypography = styled(Typography)(() => ({
 }));
 
 // sidebar
-
 export const StyledLogoBox = styled(Box)(({ theme }) => ({
   margin: '2rem 0',
   display: 'flex',
@@ -170,7 +186,6 @@ export const StyledTopListBox = styled(Box)(() => ({
 }));
 
 // layout
-
 export const StyledLayoutBox = styled(Box)(({ isMobileScreen }) => ({
   display: 'flex',
   minHeight: '100vh',
@@ -211,7 +226,6 @@ export const StyledChildrenBox = styled(Box)(() => ({
 }));
 
 // cards
-
 export const StyledCard = styled(Box)(() => ({
   padding: '20px',
   background: '#FFF',

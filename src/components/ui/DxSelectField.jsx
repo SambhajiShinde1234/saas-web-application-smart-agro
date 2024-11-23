@@ -7,12 +7,12 @@ import {
   TextFieldsWrapper,
   StyledLabel,
   StyledSelect,
-} from './Styled';
+} from '../styled/styled';
 
 const DxSelectField = ({
   name,
   label,
-  control,
+  // control,
   options = [],
   placeholder,
   startIcon,
@@ -23,7 +23,7 @@ const DxSelectField = ({
 }) => (
   <Controller
     name={name}
-    control={control}
+    // control={control}
     render={({ field }) => (
       <TextFieldsWrapper>
         <StyledLabel htmlFor={label}>{label}</StyledLabel>
