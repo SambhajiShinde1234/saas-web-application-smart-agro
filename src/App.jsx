@@ -5,6 +5,7 @@ import Layout from './layout/layout';
 import Settings from './pages/settings/Settings';
 import Support from './pages/support/Support';
 import Inventory from './pages/Inventory/Inventory';
+import NewInventory from './pages/Inventory/components/NewInventory';
 
 const ROUTES = [
   {
@@ -36,6 +37,11 @@ const ROUTES = [
     id: 6,
     path: '/inventory',
     component: <Inventory />,
+  },
+  {
+    id: 6,
+    path: '/inventory/new',
+    component: <NewInventory />,
   },
 ];
 

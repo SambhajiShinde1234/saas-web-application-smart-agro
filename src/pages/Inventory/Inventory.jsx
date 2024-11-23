@@ -10,6 +10,7 @@ import DxTabs from '../../components/ui/DxTabs';
 import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
 import { useState } from 'react';
 import AddIcon from '../../components/icons/AddIcon';
+import { useNavigate } from 'react-router-dom';
 
 const inventoryTableColumns = {
   seeds: [
@@ -139,6 +140,7 @@ const inventoryCategories = [
 ];
 
 const Inventory = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('seeds');
 
   const handleTabChange = (event, newValue) => {
@@ -149,9 +151,14 @@ const Inventory = () => {
     <StyledCardStack>
       <StyledFlexBetween>
         <DxPrimaryTypography variant="h6" noWrap>
-          Inventory Mangement
+          Inventory Management
         </DxPrimaryTypography>
-        <DxButton startIcon={<AddIcon />}>Add New Inventory</DxButton>
+        <DxButton
+          startIcon={<AddIcon />}
+          onClick={() => navigate('/inventory/new')}
+        >
+          Add New Inventory
+        </DxButton>
       </StyledFlexBetween>
       <StyledCard>
         <StyledCardStack>
