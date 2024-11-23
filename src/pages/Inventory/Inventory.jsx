@@ -1,4 +1,9 @@
-import { StyledCard, StyledCardStack } from '../../components/styled/styled';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledFlexBetween,
+} from '../../components/styled/styled';
+import DxButton from '../../components/ui/DxButton';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
 import DxTabs from '../../components/ui/DxTabs';
@@ -141,9 +146,14 @@ const Inventory = () => {
 
   return (
     <StyledCardStack>
-      <DxPrimaryTypography variant="h5">
-        Inventory Mangement
-      </DxPrimaryTypography>
+      <StyledFlexBetween>
+        <DxPrimaryTypography variant="h5">
+          Inventory Mangement
+        </DxPrimaryTypography>
+        <DxButton>
+          Add new 
+        </DxButton>
+      </StyledFlexBetween>
       <StyledCard>
         <StyledCardStack>
           <DxTabs

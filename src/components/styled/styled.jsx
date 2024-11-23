@@ -9,9 +9,16 @@ import {
   TableContainer,
   Tabs,
   Tab,
+  Button,
 } from '@mui/material';
 
 // ui
+
+// button 
+
+export const StyledButton = styled(Button)(() => ({
+  textTransform: 'none'
+}));
 
 // tabs
 
