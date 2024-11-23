@@ -24,8 +24,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   background: 'rgba(31, 194, 139, 1)',
   color: '#FFF',
   [theme.breakpoints.down('md')]: {
-    padding: '8px 12px'
-  }
+    padding: '8px 16px',
+  },
 }));
 
 // tabs
@@ -37,17 +37,20 @@ export const StyledTabs = styled(Tabs)(() => ({
   '& .Mui-selected': {
     color: 'rgba(31, 194, 139, 1) !important',
     background: 'rgba(31, 194, 139, 0.13)',
-    border: '1px solid rgba(31, 194, 139, 1)',
+    outline: '1px solid rgba(31, 194, 139, 1)',
   },
 }));
 
-export const StyledTab = styled(Tab)(() => ({
-  border: '1px solid rgba(31, 194, 139, 0.5)',
+export const StyledTab = styled(Tab)(({ theme }) => ({
+  outline: '1px solid rgba(31, 194, 139, 0.5)',
   margin: '5px',
   borderRadius: '50px',
   fontSize: '.8rem',
   textTransform: 'none',
   minHeight: '40px',
+  [theme.breakpoints.down('md')]: {
+    margin: '2px',
+  },
 }));
 
 // table

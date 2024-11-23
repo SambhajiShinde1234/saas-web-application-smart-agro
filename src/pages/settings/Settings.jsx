@@ -4,7 +4,7 @@ import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 const Settings = () => {
   return (
     <StyledCardStack>
-      <DxPrimaryTypography variant="h5">Settings</DxPrimaryTypography>
+      <DxPrimaryTypography variant="h6">Settings</DxPrimaryTypography>
     </StyledCardStack>
   );
 };

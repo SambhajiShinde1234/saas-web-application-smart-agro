@@ -129,13 +129,13 @@ const inventoryCategories = [
     itemCount: 8,
     icon: '🌾',
   },
-   { label: 'Pesticides', value: 'pesticides', itemCount: 5, icon: '🧴' },
-  // {
-  //   label: 'Machinery/Tools',
-  //   value: 'machineryTools',
-  //   itemCount: 15,
-  //   icon: '🚜',
-  // },
+  { label: 'Pesticides', value: 'pesticides', itemCount: 5, icon: '🧴' },
+  {
+    label: 'Tools',
+    value: 'machineryTools',
+    itemCount: 15,
+    icon: '🚜',
+  },
 ];
 
 const Inventory = () => {
@@ -148,7 +148,7 @@ const Inventory = () => {
   return (
     <StyledCardStack>
       <StyledFlexBetween>
-        <DxPrimaryTypography variant="h5" noWrap>
+        <DxPrimaryTypography variant="h6" noWrap>
           Inventory Mangement
         </DxPrimaryTypography>
         <DxButton startIcon={<AddIcon />}>Add New Inventory</DxButton>
