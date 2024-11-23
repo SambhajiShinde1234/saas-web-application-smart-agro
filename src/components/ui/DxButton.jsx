@@ -1,9 +1,11 @@
-import { StyledButton } from "../styled/styled";
+/* eslint-disable react/prop-types */
+import { Typography } from '@mui/material';
+import { StyledButton } from '../styled/styled';
 
-const DxButton = ({ children }) => {
+const DxButton = ({ children, startIcon }) => {
   return (
-    <StyledButton startIcon>
-{children}
+    <StyledButton startIcon={startIcon}>
+      <Typography>{children}</Typography>
     </StyledButton>
   );
 };

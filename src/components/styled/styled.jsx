@@ -14,10 +14,15 @@ import {
 
 // ui
 
-// button 
+// button
 
 export const StyledButton = styled(Button)(() => ({
-  textTransform: 'none'
+  textTransform: 'none',
+  padding: '10px 20px',
+  border: '1px solid rgba(31, 194, 139, 1)',
+  borderRadius: '50px',
+  background: 'rgba(31, 194, 139, 1)',
+  color: '#FFF',
 }));
 
 // tabs

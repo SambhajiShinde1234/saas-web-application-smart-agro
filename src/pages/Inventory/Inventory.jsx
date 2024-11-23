@@ -9,6 +9,7 @@ import DxTable from '../../components/ui/DxTable';
 import DxTabs from '../../components/ui/DxTabs';
 import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
 import { useState } from 'react';
+import AddIcon from '../../components/icons/AddIcon';
 
 const inventoryTableColumns = {
   seeds: [
@@ -150,9 +151,7 @@ const Inventory = () => {
         <DxPrimaryTypography variant="h5">
           Inventory Mangement
         </DxPrimaryTypography>
-        <DxButton>
-          Add new 
-        </DxButton>
+        <DxButton startIcon={<AddIcon />}>Add New Inventory</DxButton>
       </StyledFlexBetween>
       <StyledCard>
         <StyledCardStack>
