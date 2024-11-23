@@ -2,10 +2,10 @@
 import { Typography } from '@mui/material';
 import { StyledButton } from '../styled/styled';
 
-const DxButton = ({ children, startIcon }) => {
+const DxButton = ({ children, startIcon, sx, ...props }) => {
   return (
-    <StyledButton startIcon={startIcon}>
-      <Typography>{children}</Typography>
+    <StyledButton startIcon={startIcon} sx={sx} {...props}>
+      <Typography noWrap>{children}</Typography>
     </StyledButton>
   );
 };
