@@ -6,9 +6,7 @@ import { Grid2 } from '@mui/material';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-const inventoryValidationSchema = yup.object({
-  category: yup.string().required('Inventory category is required'),
-});
+
 
 const NewInventory = () => {
   const {
