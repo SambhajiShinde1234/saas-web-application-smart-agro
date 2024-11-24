@@ -5,9 +5,10 @@ import DxSelectField from '../../../components/ui/DxSelectField';
 import { Grid2 } from '@mui/material';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { INVENTORY_CATEGORIES } from '../../../constants/app-constant';
 
-const inventoryValidationSchema = yup.object({
-  category: yup.string().required('Inventory category is required'),
+const inventoryFormValidationSchema = yup.object({
+  inventoryCategory: yup.string().required('Inventory category is required'),
 });
 
 const NewInventory = () => {
@@ -16,7 +17,7 @@ const NewInventory = () => {
     control,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(inventoryValidationSchema),
+    resolver: yupResolver(inventoryFormValidationSchema),
   });
 
   const onSubmit = (data) => {
@@ -29,19 +30,14 @@ const NewInventory = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid2 container spacing={2}>
-          <Grid2 size={{ md: 6 }}>
+          <Grid2 size={{ md: 4 }}>
             <DxSelectField
-              name="category"
+              name="inventoryCategory"
               label="Select category"
               control={control}
-              options={[
-                { value: 1, label: 'Seeds' },
-                { value: 2, label: 'Tools' },
-                { value: 3, label: 'Pesticides' },
-                { value: 3, label: 'Fertilizers' },
-              ]}
+              options={INVENTORY_CATEGORIES}
               placeholder="Select a category"
-              errorMessage={errors.category?.message}
+              errorMessage={errors.inventoryCategory?.message}
             />
           </Grid2>
         </Grid2>
