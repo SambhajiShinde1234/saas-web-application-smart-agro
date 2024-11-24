@@ -14,6 +14,7 @@ import {
   FormHelperText,
   InputLabel,
   Select,
+  TextField,
 } from '@mui/material';
 
 // ui
@@ -23,32 +24,39 @@ export const TextFieldsWrapper = styled(Stack)(() => ({
   gap: '10px',
 }));
 
-// Styled FormControl
 export const StyledFormControl = styled(FormControl)(() => ({
   minWidth: '250px',
 }));
 
-// Styled Helper Text
 export const StyledFormHelperText = styled(FormHelperText)(() => ({
   color: '#ff1744',
   fontWeight: 500,
   margin: 0,
 }));
 
-// Styled Label
 export const StyledLabel = styled(InputLabel)(() => ({
   fontSize: '1rem',
   color: '#000',
   fontWeight: 500,
 }));
 
-// Styled Select
 export const StyledSelect = styled(Select)(() => ({
-  backgroundColor: '#FFF',
+  backgroundColor: '#F1F4F9',
   padding: '5px',
   borderRadius: '8px',
   '& .MuiSelect-select': {
     padding: '5px',
+  },
+}));
+
+export const StyledTextField = styled(TextField)(() => ({
+  backgroundColor: '#F1F4F9',
+  borderRadius: '8px',
+  '& .MuiInputBase-input': {
+    padding: '10px',
+  },
+  '& .MuiInputBase-root': {
+    borderRadius: '8px',
   },
 }));
 
