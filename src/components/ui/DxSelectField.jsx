@@ -19,6 +19,7 @@ const DxSelectField = ({
   endIcon,
   errorMessage,
   type,
+  required,
   ...props
 }) => {
   return (
@@ -27,7 +28,9 @@ const DxSelectField = ({
       control={control}
       render={({ field }) => (
         <TextFieldsWrapper>
-          <StyledLabel htmlFor={label}>{label}</StyledLabel>
+          <StyledLabel htmlFor={label}>
+            {label} {required && <span>*</span>}
+          </StyledLabel>
           <StyledFormControl error={!!errorMessage}>
             <StyledSelect
               {...field}
@@ -43,7 +46,6 @@ const DxSelectField = ({
                   <InputAdornment position="end">{endIcon}</InputAdornment>
                 )
               }
-              
               {...props}
             >
               <MenuItem disabled value="">

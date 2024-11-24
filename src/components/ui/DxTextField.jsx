@@ -17,6 +17,7 @@ const DxTextField = ({
   startIcon,
   endIcon,
   errorMessage,
+  required,
   ...props
 }) => {
   return (
@@ -25,7 +26,9 @@ const DxTextField = ({
       control={control}
       render={({ field }) => (
         <TextFieldsWrapper>
-          <StyledLabel htmlFor={name}>{label}</StyledLabel>
+          <StyledLabel htmlFor={name}>
+            {label} {required && <span>*</span>}
+          </StyledLabel>
           <StyledFormControl error={!!errorMessage}>
             <StyledTextField
               {...field}

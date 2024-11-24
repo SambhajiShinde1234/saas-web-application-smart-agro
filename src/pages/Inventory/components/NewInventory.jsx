@@ -10,7 +10,13 @@ import DxTextField from '../../../components/ui/DxTextField';
 
 const inventoryFormValidationSchema = yup.object({
   inventoryCategory: yup.string().required('Inventory category is required'),
-  name: yup.string().required('Product name is required'),
+  name: yup.string().trim().required('Product name is required'),
+  availableQuantity: yup
+    .number()
+    .transform((value, originalValue) => (originalValue === '' ? null : value))
+    .positive('Available quantity must be a positive number')
+    .required('Available quantity is required'),
+  batchNumber: yup.string().trim().required('Batch number is required'),
 });
 
 const NewInventory = () => {
@@ -20,6 +26,12 @@ const NewInventory = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(inventoryFormValidationSchema),
+    defaultValues: {
+      inventoryCategory: '',
+      name: '',
+      availableQuantity: '',
+      batchNumber: '',
+    },
   });
 
   const onSubmit = (data) => {
@@ -34,6 +46,7 @@ const NewInventory = () => {
           <Grid2 container spacing={2}>
             <Grid2 size={{ md: 4 }}>
               <DxSelectField
+                required
                 name="inventoryCategory"
                 label="Select category"
                 control={control}
@@ -44,6 +57,7 @@ const NewInventory = () => {
             </Grid2>
             <Grid2 size={{ md: 4 }}>
               <DxTextField
+                required
                 name="name"
                 label="Product Name"
                 control={control}
@@ -51,26 +65,28 @@ const NewInventory = () => {
                 errorMessage={errors.name?.message}
               />
             </Grid2>
-            {/* <Grid2 size={{ md: 4 }}>
-              <DxSelectField
-                name="inventoryCategory"
-                label="Select category"
+            <Grid2 size={{ md: 4 }}>
+              <DxTextField
+                required
+                type="number"
+                name="availableQuantity"
+                label="Available Quantity (Bags)"
                 control={control}
-                options={INVENTORY_CATEGORIES}
-                placeholder="Select a category"
-                errorMessage={errors.inventoryCategory?.message}
+                placeholder="Enter available quantity"
+                errorMessage={errors.availableQuantity?.message}
               />
             </Grid2>
             <Grid2 size={{ md: 4 }}>
-              <DxSelectField
-                name="inventoryCategory"
-                label="Select category"
+              <DxTextField
+                required
+                name="batchNumber"
+                label="Batch Number"
                 control={control}
-                options={INVENTORY_CATEGORIES}
-                placeholder="Select a category"
-                errorMessage={errors.inventoryCategory?.message}
+                placeholder="Enter batch number (eg. S-24512)"
+                errorMessage={errors.batchNumber?.message}
               />
-            </Grid2> */}
+            </Grid2>
+          
           </Grid2>
           <button type="submit">Submit</button>
         </form>
