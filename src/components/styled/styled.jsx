@@ -73,13 +73,13 @@ export const StyledDatePicker = styled(DatePicker)(() => ({
 }));
 
 // button
-export const StyledButton = styled(Button)(({ theme }) => ({
+export const StyledButton = styled(Button)(({ theme, variant }) => ({
   textTransform: 'none',
   padding: '10px 20px',
   border: '1px solid rgba(31, 194, 139, 1)',
   borderRadius: '50px',
-  background: 'rgba(31, 194, 139, 1)',
-  color: '#FFF',
+  background: variant === 'secondary' ? '' : 'rgba(31, 194, 139, 1)',
+  color: variant === 'secondary' ? '#000' : '#FFF',
   [theme.breakpoints.down('md')]: {
     padding: '8px 16px',
   },
