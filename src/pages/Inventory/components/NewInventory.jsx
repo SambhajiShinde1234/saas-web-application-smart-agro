@@ -1,12 +1,13 @@
 import { useForm } from 'react-hook-form';
-import { StyledCard, StyledCardStack } from '../../../components/styled/styled';
-import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
-import DxSelectField from '../../../components/ui/DxSelectField';
 import { Grid2 } from '@mui/material';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { INVENTORY_CATEGORIES } from '../../../constants/app-constant';
+import { StyledCard, StyledCardStack } from '../../../components/styled/styled';
 import DxTextField from '../../../components/ui/DxTextField';
+import DxDatePicker from '../../../components/ui/DxDatePicker';
+import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
+import DxSelectField from '../../../components/ui/DxSelectField';
 
 const inventoryFormValidationSchema = yup.object({
   inventoryCategory: yup.string().required('Inventory category is required'),
@@ -17,6 +18,7 @@ const inventoryFormValidationSchema = yup.object({
     .positive('Available quantity must be a positive number')
     .required('Available quantity is required'),
   batchNumber: yup.string().trim().required('Batch number is required'),
+  expiryDate: yup.string().required('Expiry date is required'),
 });
 
 const NewInventory = () => {
@@ -44,7 +46,7 @@ const NewInventory = () => {
       <StyledCard>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid2 container spacing={2}>
-            <Grid2 size={{ md: 4 }}>
+            <Grid2 size={{ xs: 12, md: 4 }}>
               <DxSelectField
                 required
                 name="inventoryCategory"
@@ -55,7 +57,7 @@ const NewInventory = () => {
                 errorMessage={errors.inventoryCategory?.message}
               />
             </Grid2>
-            <Grid2 size={{ md: 4 }}>
+            <Grid2 size={{ xs: 12, md: 4 }}>
               <DxTextField
                 required
                 name="name"
@@ -65,7 +67,7 @@ const NewInventory = () => {
                 errorMessage={errors.name?.message}
               />
             </Grid2>
-            <Grid2 size={{ md: 4 }}>
+            <Grid2 size={{ xs: 12, md: 4 }}>
               <DxTextField
                 required
                 type="number"
@@ -76,7 +78,7 @@ const NewInventory = () => {
                 errorMessage={errors.availableQuantity?.message}
               />
             </Grid2>
-            <Grid2 size={{ md: 4 }}>
+            <Grid2 size={{ xs: 12, md: 4 }}>
               <DxTextField
                 required
                 name="batchNumber"
@@ -86,7 +88,16 @@ const NewInventory = () => {
                 errorMessage={errors.batchNumber?.message}
               />
             </Grid2>
-          
+            <Grid2 size={{ xs: 12, md: 4 }}>
+              <DxDatePicker
+                required
+                name="expiryDate"
+                label="Select expiry date"
+                control={control}
+                placeholder="Select expiry date"
+                errorMessage={errors.expiryDate?.message}
+              />
+            </Grid2>
           </Grid2>
           <button type="submit">Submit</button>
         </form>
