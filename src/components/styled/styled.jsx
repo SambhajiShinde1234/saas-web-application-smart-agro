@@ -13,31 +13,45 @@ import {
   FormControl,
   FormHelperText,
   InputLabel,
-  Select
+  Select,
 } from '@mui/material';
 
 // ui
 
 // form
-export const StyledFormControl = styled(FormControl)(({ theme }) => ({
- 
+export const TextFieldsWrapper = styled(Stack)(() => ({
+  gap: '10px',
 }));
 
-export const StyledFormHelperText = styled(FormHelperText)(({ theme }) => ({
- 
+// Styled FormControl
+export const StyledFormControl = styled(FormControl)(() => ({
+  minWidth: '250px',
 }));
 
-export const TextFieldsWrapper = styled(FormHelperText)(({ theme }) => ({
- 
+// Styled Helper Text
+export const StyledFormHelperText = styled(FormHelperText)(() => ({
+  color: '#ff1744',
+  fontWeight: 500,
+  margin: 0,
 }));
 
-export const StyledLabel = styled(InputLabel)(({ theme }) => ({
- 
+// Styled Label
+export const StyledLabel = styled(InputLabel)(() => ({
+  fontSize: '1rem',
+  color: '#000',
+  fontWeight: 500,
 }));
 
-export const StyledSelect = styled(Select)(({ theme }) => ({
- 
+// Styled Select
+export const StyledSelect = styled(Select)(() => ({
+  backgroundColor: '#FFF',
+  padding: '5px',
+  borderRadius: '8px',
+  '& .MuiSelect-select': {
+    padding: '5px',
+  },
 }));
+
 // button
 export const StyledButton = styled(Button)(({ theme }) => ({
   textTransform: 'none',
