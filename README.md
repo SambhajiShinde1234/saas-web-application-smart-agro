@@ -26,10 +26,13 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 ## Screenshot
 
 - Dashboard
-![Screenshot 2024-11-24 143133](https://github.com/user-attachments/assets/65b7cc33-98de-4ee9-b055-4f0a5d10787c)
+  
+![Screenshot 2024-11-24 143058](https://github.com/user-attachments/assets/60c19339-2668-4dcd-a7a8-e4ad2bcd93f4)
 
 - Inventory
-![Screenshot 2024-11-24 143058](https://github.com/user-attachments/assets/60c19339-2668-4dcd-a7a8-e4ad2bcd93f4)
+  
+![Screenshot 2024-11-24 143133](https://github.com/user-attachments/assets/65b7cc33-98de-4ee9-b055-4f0a5d10787c)
+
 
 
 ## Getting Started
