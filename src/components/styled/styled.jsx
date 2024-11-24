@@ -16,6 +16,7 @@ import {
   Select,
   TextField,
 } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers';
 
 // ui
 
@@ -50,6 +51,17 @@ export const StyledSelect = styled(Select)(() => ({
 }));
 
 export const StyledTextField = styled(TextField)(() => ({
+  backgroundColor: '#F1F4F9',
+  borderRadius: '8px',
+  '& .MuiInputBase-input': {
+    padding: '10px',
+  },
+  '& .MuiInputBase-root': {
+    borderRadius: '8px',
+  },
+}));
+
+export const StyledDatePicker = styled(DatePicker)(() => ({
   backgroundColor: '#F1F4F9',
   borderRadius: '8px',
   '& .MuiInputBase-input': {

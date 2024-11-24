@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Controller } from 'react-hook-form';
-import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { TextField } from '@mui/material';
 import {
   StyledFormControl,
   StyledFormHelperText,
   TextFieldsWrapper,
   StyledLabel,
+  StyledTextField,
+  StyledDatePicker,
 } from '../styled/styled';
 
 const DxDatePicker = ({
@@ -30,11 +30,12 @@ const DxDatePicker = ({
           </StyledLabel>
           <StyledFormControl error={!!errorMessage}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
+              <StyledDatePicker
                 {...field}
                 {...props}
+                format="DD/MM/YYYY"
                 renderInput={(params) => (
-                  <TextField
+                  <StyledTextField
                     {...params}
                     error={!!errorMessage}
                     helperText={errorMessage}
