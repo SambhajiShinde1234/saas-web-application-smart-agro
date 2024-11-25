@@ -22,7 +22,8 @@ import { DatePicker } from '@mui/x-date-pickers';
 
 // form
 export const TextFieldsWrapper = styled(Stack)(() => ({
-  gap: '10px',
+  gap: '5px',
+  marginBottom: '0.7rem'
 }));
 
 export const StyledFormControl = styled(FormControl)(() => ({

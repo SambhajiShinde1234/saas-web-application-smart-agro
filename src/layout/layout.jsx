@@ -9,8 +9,6 @@ import {
   StyledLayoutBox,
   StyledMainBox,
 } from '../components/styled/styled';
-import DxButton from '../components/ui/DxButton';
-import LeftArrowicon from '../components/icons/LeftArrowIcon';
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
