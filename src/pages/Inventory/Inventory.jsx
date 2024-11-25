@@ -113,7 +113,7 @@ const inventoryTableColumns = {
       width: 150,
     },
     { columnName: 'Supplier', field: 'supplier', align: 'left', width: 150 },
-    { columnName: 'condition', field: 'condition', align: 'left', width: 150 },
+    { columnName: 'Condition', field: 'condition', align: 'left', width: 150 },
   ],
 };
 

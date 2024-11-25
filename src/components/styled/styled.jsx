@@ -42,7 +42,6 @@ export const StyledLabel = styled(InputLabel)(() => ({
 }));
 
 export const StyledSelect = styled(Select)(() => ({
-  backgroundColor: '#F1F4F9',
   padding: '5px',
   borderRadius: '8px',
   '& .MuiSelect-select': {
@@ -51,7 +50,6 @@ export const StyledSelect = styled(Select)(() => ({
 }));
 
 export const StyledTextField = styled(TextField)(() => ({
-  backgroundColor: '#F1F4F9',
   borderRadius: '8px',
   '& .MuiInputBase-input': {
     padding: '10px',
@@ -62,7 +60,6 @@ export const StyledTextField = styled(TextField)(() => ({
 }));
 
 export const StyledDatePicker = styled(DatePicker)(() => ({
-  backgroundColor: '#F1F4F9',
   borderRadius: '8px',
   '& .MuiInputBase-input': {
     padding: '10px',

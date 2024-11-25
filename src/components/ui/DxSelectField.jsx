@@ -51,7 +51,8 @@ const DxSelectField = ({
                 PaperProps: {
                   style: {
                     maxHeight: '200px',
-                    backgroundColor: '#FFF'
+                    backgroundColor: '#FFF',
+                    borderRadius: '8px'
                   },
                 },
               }}
