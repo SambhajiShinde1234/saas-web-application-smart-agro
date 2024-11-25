@@ -29,6 +29,7 @@ const inventoryFormValidationSchema = yup.object({
     .number()
     .transform((value, originalValue) => (originalValue === '' ? null : value))
     .required('Threshold quantity is required'),
+  modelName: yup.string().trim().required('Model name is required'),
 });
 
 const NewInventory = () => {
@@ -44,6 +45,11 @@ const NewInventory = () => {
       name: '',
       availableQuantity: '',
       batchNumber: '',
+      expiryDate: '',
+      supplierName: '',
+      threshold: '',
+      modelName: '',
+      purchasedDate: '',
     },
   });
 
@@ -131,6 +137,16 @@ const NewInventory = () => {
                   control={control}
                   placeholder="Enter threshold quantity"
                   errorMessage={errors.threshold?.message}
+                />
+              </Grid2>
+              <Grid2 size={{ xs: 12, md: 4 }}>
+                <DxTextField
+                  required
+                  name="modelName"
+                  label="Model Name"
+                  control={control}
+                  placeholder="Enter model name"
+                  errorMessage={errors.modelName?.message}
                 />
               </Grid2>
             </Grid2>

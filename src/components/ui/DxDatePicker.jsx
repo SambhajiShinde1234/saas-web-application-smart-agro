@@ -31,11 +31,11 @@ const DxDatePicker = ({
           <StyledFormControl error={!!errorMessage}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <StyledDatePicker
-                {...field}
                 {...props}
                 format="DD/MM/YYYY"
                 renderInput={(params) => (
                   <StyledTextField
+                    {...field}
                     {...params}
                     error={!!errorMessage}
                     helperText={errorMessage}

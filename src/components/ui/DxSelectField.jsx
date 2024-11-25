@@ -47,6 +47,14 @@ const DxSelectField = ({
                 )
               }
               {...props}
+              MenuProps={{
+                PaperProps: {
+                  style: {
+                    maxHeight: '200px',
+                    backgroundColor: '#FFF'
+                  },
+                },
+              }}
             >
               <MenuItem disabled value="">
                 <>{placeholder}</>
@@ -57,7 +65,9 @@ const DxSelectField = ({
                 </MenuItem>
               ))}
             </StyledSelect>
-            <StyledFormHelperText>{errorMessage}</StyledFormHelperText>
+            {errorMessage && (
+              <StyledFormHelperText>{errorMessage}</StyledFormHelperText>
+            )}
           </StyledFormControl>
         </TextFieldsWrapper>
       )}

@@ -45,7 +45,9 @@ const DxTextField = ({
               error={!!errorMessage}
               {...props}
             />
-            <StyledFormHelperText>{errorMessage}</StyledFormHelperText>
+            {errorMessage && (
+              <StyledFormHelperText>{errorMessage}</StyledFormHelperText>
+            )}
           </StyledFormControl>
         </TextFieldsWrapper>
       )}
