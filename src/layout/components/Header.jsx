@@ -18,7 +18,8 @@ import {
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
 import HumbergureMenu from '../../components/icons/HumbergureMenu';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import LeftArrowIcon from '../../components/icons/LeftArrowIcon';
 
 const WelcomeSection = () => {
   return (
@@ -55,6 +56,7 @@ const SearchSection = () => {
 const Header = ({ handleDrawerToggle }) => {
   const location = useLocation();
   const theme = useTheme();
+  const navigate = useNavigate();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
@@ -70,6 +72,11 @@ const Header = ({ handleDrawerToggle }) => {
               >
                 <HumbergureMenu />
               </IconButton>
+              <StyledIconBox>
+                <DxIconButton onClick={() => navigate(-1)}>
+                  <LeftArrowIcon />
+                </DxIconButton>
+              </StyledIconBox>
               <SearchSection />
               <NotificationSection />
             </StyledFlexBetween>
@@ -82,7 +89,14 @@ const Header = ({ handleDrawerToggle }) => {
         )}
         {!isMobileScreen && (
           <>
-            <WelcomeSection />
+            <StyledFlexCenter>
+              <StyledIconBox>
+                <DxIconButton onClick={() => navigate(-1)}>
+                  <LeftArrowIcon />
+                </DxIconButton>
+              </StyledIconBox>
+              <WelcomeSection />
+            </StyledFlexCenter>
             <StyledFlexCenter>
               <SearchSection />
               <NotificationSection />

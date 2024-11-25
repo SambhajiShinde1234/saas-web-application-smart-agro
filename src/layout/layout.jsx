@@ -9,7 +9,6 @@ import {
   StyledLayoutBox,
   StyledMainBox,
 } from '../components/styled/styled';
-
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
   const theme = useTheme();

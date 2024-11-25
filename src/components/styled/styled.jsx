@@ -23,7 +23,7 @@ import { DatePicker } from '@mui/x-date-pickers';
 // form
 export const TextFieldsWrapper = styled(Stack)(() => ({
   gap: '5px',
-  marginBottom: '0.7rem'
+  marginBottom: '0.7rem', // to add spacing between evry form field
 }));
 
 export const StyledFormControl = styled(FormControl)(() => ({
@@ -254,7 +254,7 @@ export const StyledMainBox = styled(Box)(
 );
 
 export const StyledChildrenBox = styled(Box)(() => ({
-  margin: '2rem 0 0 0 ',
+  margin: '2.5rem 0 0 0 ',
 }));
 
 // cards
