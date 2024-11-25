@@ -192,7 +192,7 @@ const NewInventory = () => {
                       required
                       type="number"
                       name="availableQuantity"
-                      label="Available Quantity (units)"
+                      label="Available Quantity (Units)"
                       control={control}
                       placeholder="Enter available quantity"
                       errorMessage={errors.availableQuantity?.message}
