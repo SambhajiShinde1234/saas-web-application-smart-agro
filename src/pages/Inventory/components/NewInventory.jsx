@@ -24,6 +24,7 @@ const inventoryFormValidationSchema = yup.object({
     .required('Available quantity is required'),
   batchNumber: yup.string().trim().required('Batch number is required'),
   expiryDate: yup.string().required('Expiry date is required'),
+  purchasedDate: yup.string().required('Purchased date is required'),
   supplierName: yup.string().trim().required('Supplier name is required'),
   threshold: yup
     .number()
@@ -64,7 +65,7 @@ const NewInventory = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <StyledCardStack>
             <Grid2 container spacing={2}>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
                 <DxSelectField
                   required
                   name="inventoryCategory"
@@ -77,7 +78,7 @@ const NewInventory = () => {
               </Grid2>
             </Grid2>
             <Grid2 container spacing={2}>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="name"
@@ -87,7 +88,7 @@ const NewInventory = () => {
                   errorMessage={errors.name?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   type="number"
@@ -98,7 +99,7 @@ const NewInventory = () => {
                   errorMessage={errors.availableQuantity?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="batchNumber"
@@ -108,7 +109,7 @@ const NewInventory = () => {
                   errorMessage={errors.batchNumber?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxDatePicker
                   required
                   name="expiryDate"
@@ -118,7 +119,7 @@ const NewInventory = () => {
                   errorMessage={errors.expiryDate?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="supplierName"
@@ -128,7 +129,7 @@ const NewInventory = () => {
                   errorMessage={errors.supplierName?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   type="number"
@@ -139,7 +140,7 @@ const NewInventory = () => {
                   errorMessage={errors.threshold?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12, md: 4 }}>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="modelName"
@@ -147,6 +148,16 @@ const NewInventory = () => {
                   control={control}
                   placeholder="Enter model name"
                   errorMessage={errors.modelName?.message}
+                />
+              </Grid2>
+              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
+                <DxDatePicker
+                  required
+                  name="purchasedDate"
+                  label="Purchased Date"
+                  control={control}
+                  placeholder="Select purchased date"
+                  errorMessage={errors.expiryDate?.message}
                 />
               </Grid2>
             </Grid2>
