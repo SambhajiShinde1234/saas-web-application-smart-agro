@@ -1,8 +1,11 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { Grid2 } from '@mui/material';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { INVENTORY_CATEGORIES } from '../../../constants/app-constant';
+import {
+  INVENTORY_CATEGORIES,
+  TOOL_CONDITION,
+} from '../../../constants/app-constant';
 import {
   StyledCard,
   StyledCardStack,
@@ -31,6 +34,7 @@ const inventoryFormValidationSchema = yup.object({
     .transform((value, originalValue) => (originalValue === '' ? null : value))
     .required('Threshold quantity is required'),
   modelName: yup.string().trim().required('Model name is required'),
+  toolCondition: yup.string().trim().required('Tool condition is required'),
 });
 
 const NewInventory = () => {
@@ -51,7 +55,13 @@ const NewInventory = () => {
       threshold: '',
       modelName: '',
       purchasedDate: '',
+      toolCondition: '',
     },
+  });
+
+  const selectedInventoryCategory = useWatch({
+    control,
+    name: 'inventoryCategory',
   });
 
   const onSubmit = (data) => {
@@ -78,48 +88,17 @@ const NewInventory = () => {
               </Grid2>
             </Grid2>
             <Grid2 container spacing={2}>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
+              <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="name"
                   label="Product Name"
                   control={control}
-                  placeholder="Enter product name (eg. chilli seeds, phosphate)"
+                  placeholder="Enter product name"
                   errorMessage={errors.name?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxTextField
-                  required
-                  type="number"
-                  name="availableQuantity"
-                  label="Available Quantity (Bags)"
-                  control={control}
-                  placeholder="Enter available quantity"
-                  errorMessage={errors.availableQuantity?.message}
-                />
-              </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxTextField
-                  required
-                  name="batchNumber"
-                  label="Batch Number"
-                  control={control}
-                  placeholder="Enter batch number (eg. S-24512)"
-                  errorMessage={errors.batchNumber?.message}
-                />
-              </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxDatePicker
-                  required
-                  name="expiryDate"
-                  label="Expiry Date"
-                  control={control}
-                  placeholder="Select expiry date"
-                  errorMessage={errors.expiryDate?.message}
-                />
-              </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
+              <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
                 <DxTextField
                   required
                   name="supplierName"
@@ -129,37 +108,98 @@ const NewInventory = () => {
                   errorMessage={errors.supplierName?.message}
                 />
               </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxTextField
-                  required
-                  type="number"
-                  name="threshold"
-                  label="Threshold Quantity (Bags)"
-                  control={control}
-                  placeholder="Enter threshold quantity"
-                  errorMessage={errors.threshold?.message}
-                />
-              </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxTextField
-                  required
-                  name="modelName"
-                  label="Model Name"
-                  control={control}
-                  placeholder="Enter model name"
-                  errorMessage={errors.modelName?.message}
-                />
-              </Grid2>
-              <Grid2 size={{ xs: 12,sm: 6, lg: 4 }}>
-                <DxDatePicker
-                  required
-                  name="purchasedDate"
-                  label="Purchased Date"
-                  control={control}
-                  placeholder="Select purchased date"
-                  errorMessage={errors.expiryDate?.message}
-                />
-              </Grid2>
+              {selectedInventoryCategory !== 'tools' && (
+                <>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxTextField
+                      required
+                      type="number"
+                      name="availableQuantity"
+                      label="Available Quantity (Bags)"
+                      control={control}
+                      placeholder="Enter available quantity"
+                      errorMessage={errors.availableQuantity?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxDatePicker
+                      required
+                      name="expiryDate"
+                      label="Expiry Date"
+                      control={control}
+                      placeholder="Select expiry date"
+                      errorMessage={errors.expiryDate?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxTextField
+                      required
+                      name="batchNumber"
+                      label="Batch Number"
+                      control={control}
+                      placeholder="Enter batch number (eg. S-24512)"
+                      errorMessage={errors.batchNumber?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxTextField
+                      required
+                      type="number"
+                      name="threshold"
+                      label="Threshold Quantity (Bags)"
+                      control={control}
+                      placeholder="Enter threshold quantity"
+                      errorMessage={errors.threshold?.message}
+                    />
+                  </Grid2>
+                </>
+              )}
+              {selectedInventoryCategory === 'tools' && (
+                <>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxTextField
+                      required
+                      name="modelName"
+                      label="Model Name"
+                      control={control}
+                      placeholder="Enter model name"
+                      errorMessage={errors.modelName?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxDatePicker
+                      required
+                      name="purchasedDate"
+                      label="Purchased Date"
+                      control={control}
+                      placeholder="Select purchased date"
+                      errorMessage={errors.purchasedDate?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxSelectField
+                      required
+                      name="toolCondition"
+                      label="Tool condition"
+                      control={control}
+                      options={TOOL_CONDITION}
+                      placeholder="Select a condition"
+                      errorMessage={errors.toolCondition?.message}
+                    />
+                  </Grid2>
+                  <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <DxTextField
+                      required
+                      type="number"
+                      name="availableQuantity"
+                      label="Available Quantity (units)"
+                      control={control}
+                      placeholder="Enter available quantity"
+                      errorMessage={errors.availableQuantity?.message}
+                    />
+                  </Grid2>
+                </>
+              )}
             </Grid2>
             <StyledFlexCenter>
               <DxButton
