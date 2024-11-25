@@ -112,7 +112,7 @@ const NewInventory = () => {
                 <DxDatePicker
                   required
                   name="expiryDate"
-                  label="Expiry date"
+                  label="Expiry Date"
                   control={control}
                   placeholder="Select expiry date"
                   errorMessage={errors.expiryDate?.message}
