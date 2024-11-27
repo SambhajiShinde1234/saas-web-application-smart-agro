@@ -2,7 +2,6 @@ import {
   Box,
   IconButton,
   Stack,
-  // Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
