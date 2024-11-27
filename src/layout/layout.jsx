@@ -9,6 +9,7 @@ import {
   StyledLayoutBox,
   StyledMainBox,
 } from '../components/styled/styled';
+import Footer from './components/Footer';
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
         </Box>
         {/* main content */}
         <StyledChildrenBox>{children}</StyledChildrenBox>
+        <Footer />
       </StyledMainBox>
     </StyledLayoutBox>
   );
