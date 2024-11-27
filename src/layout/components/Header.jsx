@@ -24,7 +24,7 @@ const WelcomeSection = () => {
   return (
     <Stack gap={0.5}>
       <DxPrimaryTypography variant="h5" sx={{ fontFamily: 'cursive' }}>
-        Hellow, Jeremy! 👋
+        Hello, Sam ! 👋
       </DxPrimaryTypography>
       <DxSecondaryTypography variant="">
         Welcome back to Smart Agro !
