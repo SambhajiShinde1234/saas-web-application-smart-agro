@@ -42,6 +42,10 @@ export const StyledLabel = styled(InputLabel)(() => ({
   fontWeight: 500,
 }));
 
+export const StyledRequiredMark = styled('span')(() => ({
+  color: 'red'
+}));
+
 export const StyledSelect = styled(Select)(() => ({
   padding: '5px',
   borderRadius: '8px',

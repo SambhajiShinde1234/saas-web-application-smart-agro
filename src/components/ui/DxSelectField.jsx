@@ -7,6 +7,7 @@ import {
   TextFieldsWrapper,
   StyledLabel,
   StyledSelect,
+  StyledRequiredMark,
 } from '../styled/styled';
 
 const DxSelectField = ({
@@ -29,7 +30,7 @@ const DxSelectField = ({
       render={({ field }) => (
         <TextFieldsWrapper>
           <StyledLabel htmlFor={label}>
-            {label} {required && <span>*</span>}
+            {label} {required && <StyledRequiredMark>*</StyledRequiredMark>}
           </StyledLabel>
           <StyledFormControl error={!!errorMessage}>
             <StyledSelect

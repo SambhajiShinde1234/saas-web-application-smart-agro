@@ -9,6 +9,7 @@ import {
   StyledLabel,
   StyledTextField,
   StyledDatePicker,
+  StyledRequiredMark,
 } from '../styled/styled';
 
 const DxDatePicker = ({
@@ -26,7 +27,7 @@ const DxDatePicker = ({
       render={({ field }) => (
         <TextFieldsWrapper>
           <StyledLabel htmlFor={name}>
-            {label} {required && <span>*</span>}
+            {label} {required && <StyledRequiredMark>*</StyledRequiredMark>}
           </StyledLabel>
           <StyledFormControl error={!!errorMessage}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
