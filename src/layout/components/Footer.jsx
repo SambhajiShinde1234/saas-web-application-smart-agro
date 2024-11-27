@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <StyledFlexCenter sx={{marginTop: '1rem'}}>
       <DxPrimaryTypography>
-        Built in Bharat❤️- Powered by SmartAgro
+        Built in Bharat❤️ - Powered by SmartAgro
       </DxPrimaryTypography>
     </StyledFlexCenter>
   );
