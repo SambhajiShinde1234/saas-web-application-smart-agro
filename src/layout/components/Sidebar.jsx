@@ -34,7 +34,7 @@ const MENUS = [
     id: 3,
     title: 'Inventory',
     icon: <InventoryIcon />,
-    href: '/inventory',
+    href: '/manage-inventory',
   },
   {
     id: 4,

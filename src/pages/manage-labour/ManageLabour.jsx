@@ -1,5 +1,5 @@
 import { StyledCard, StyledCardStack } from '../../components/styled/styled';
-import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
+import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
 import { LABOR_MANAGEMENT } from '../../dummy-data/FarmData';
 
@@ -20,14 +20,12 @@ const tableColumns = [
 
 const ManageLabour = () => {
   return (
-    <StyledCard>
-      <StyledCardStack>
-        <DxSecondaryTypography variant="h6">
-          Labor Management
-        </DxSecondaryTypography>
+    <StyledCardStack>
+      <DxPrimaryTypography variant="h6">Labor Management</DxPrimaryTypography>
+      <StyledCard>
         <DxTable columns={tableColumns} data={LABOR_MANAGEMENT} />
-      </StyledCardStack>
-    </StyledCard>
+      </StyledCard>
+    </StyledCardStack>
   );
 };
 

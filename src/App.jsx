@@ -36,7 +36,7 @@ const ROUTES = [
   },
   {
     id: 6,
-    path: '/inventory',
+    path: '/manage-inventory',
     component: <Inventory />,
   },
   {

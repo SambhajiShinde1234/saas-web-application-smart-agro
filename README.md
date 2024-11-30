@@ -33,6 +33,9 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
   
 ![Screenshot 2024-11-24 143133](https://github.com/user-attachments/assets/65b7cc33-98de-4ee9-b055-4f0a5d10787c)
 
+- Add New Inventory
+
+  ![Screenshot 2024-11-30 110702](https://github.com/user-attachments/assets/bae608c7-222e-43c5-8999-152320d28a10)
 
 
 ## Getting Started
