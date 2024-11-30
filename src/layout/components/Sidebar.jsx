@@ -1,11 +1,5 @@
 import { Box, List, ListItem, ListItemText } from '@mui/material';
-import DashboardIcon from '../../components/icons/DashboardIcon';
-import OverviewIcon from '../../components/icons/OverviewIcon';
-import SettingIcon from '../../components/icons/SettingIcon';
 import LogoutIcon from '../../components/icons/LogoutIcon';
-import HelpIcon from '../../components/icons/HelpIcon';
-import InventoryIcon from '../../components/icons/InventoryIcon';
-import LabourIcon from '../../components/icons/LabourIcon';
 import {
   StyledListeitemText,
   StyledLogo,
@@ -17,48 +11,7 @@ import {
   StyledListsStack,
 } from '../../components/styled/styled';
 import { useLocation, useNavigate } from 'react-router-dom';
-
-const MENUS = [
-  {
-    id: 1,
-    title: 'Overview',
-    icon: <DashboardIcon />,
-    href: '/overview',
-  },
-  {
-    id: 2,
-    title: 'Dashboard',
-    icon: <OverviewIcon />,
-    href: '/dashboard',
-  },
-  {
-    id: 3,
-    title: 'Inventory',
-    icon: <InventoryIcon />,
-    href: '/manage-inventory',
-  },
-  {
-    id: 4,
-    title: 'Manage Labour',
-    icon: <LabourIcon />,
-    href: '/manage-labour',
-  },
-];
-
-const EXTRA_MENUS = [
-  {
-    id: 1,
-    title: 'Settings',
-    icon: <SettingIcon />,
-    href: '/settings',
-  },
-  {
-    id: 2,
-    title: 'Support',
-    icon: <HelpIcon />,
-    href: '/support',
-  },
-];
+import { EXTRA_MENUS, MENUS } from '../../routes/Routes';
 
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ handleDrawerToggle }) => {
