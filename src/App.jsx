@@ -6,6 +6,7 @@ import Settings from './pages/settings/Settings';
 import Support from './pages/support/Support';
 import Inventory from './pages/Inventory/Inventory';
 import NewInventory from './pages/Inventory/components/NewInventory';
+import ManageLabour from './pages/manage-labour/ManageLabour';
 
 const ROUTES = [
   {
@@ -42,6 +43,11 @@ const ROUTES = [
     id: 6,
     path: '/inventory/new',
     component: <NewInventory />,
+  },
+  {
+    id: 17,
+    path: '/manage-labour',
+    component: <ManageLabour />,
   },
 ];
 

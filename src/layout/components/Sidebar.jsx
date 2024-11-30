@@ -36,6 +36,12 @@ const MENUS = [
     icon: <InventoryIcon />,
     href: '/inventory',
   },
+  {
+    id: 4,
+    title: 'Manage Labour',
+    icon: <DashboardIcon />,
+    href: '/manage-labour',
+  },
 ];
 
 const EXTRA_MENUS = [
