@@ -254,6 +254,10 @@ export const StyledMainBox = styled(Box)(
     [theme.breakpoints.down('md')]: {
       padding: '1rem',
     },
+    //to bring header , children and footer in align together
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
   })
 );
 
