@@ -5,6 +5,7 @@ import SettingIcon from '../../components/icons/SettingIcon';
 import LogoutIcon from '../../components/icons/LogoutIcon';
 import HelpIcon from '../../components/icons/HelpIcon';
 import InventoryIcon from '../../components/icons/InventoryIcon';
+import LabourIcon from '../../components/icons/LabourIcon';
 import {
   StyledListeitemText,
   StyledLogo,
@@ -39,7 +40,7 @@ const MENUS = [
   {
     id: 4,
     title: 'Manage Labour',
-    icon: <DashboardIcon />,
+    icon: <LabourIcon />,
     href: '/manage-labour',
   },
 ];
