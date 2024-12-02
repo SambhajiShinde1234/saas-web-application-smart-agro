@@ -210,7 +210,7 @@ const NewInventory = () => {
                 Reset
               </DxButton>
               <DxButton type="submit" sx={{ width: '120px' }}>
-                Add
+                Submit
               </DxButton>
             </StyledFlexCenter>
           </StyledCardStack>

@@ -1,11 +1,16 @@
 import { useForm } from 'react-hook-form';
-import { StyledCard, StyledCardStack } from '../../../components/styled/styled';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledFlexCenter,
+} from '../../../components/styled/styled';
 import DxPrimaryTypography from '../../../components/ui/DxPrimaryTypography';
 import { Grid2 } from '@mui/material';
 import DxTextField from '../../../components/ui/DxTextField';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import DxDatePicker from '../../../components/ui/DxDatePicker';
+import DxButton from '../../../components/ui/DxButton';
 
 const taskValidationSchema = yup.object({
   work: yup.string().trim().required('Work title is required'),
@@ -26,6 +31,7 @@ const NewWork = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(taskValidationSchema),
@@ -81,6 +87,18 @@ const NewWork = () => {
               />
             </Grid2>
           </Grid2>
+          <StyledFlexCenter>
+            <DxButton
+              variant="secondary"
+              onClick={() => reset()}
+              sx={{ width: '120px' }}
+            >
+              Reset
+            </DxButton>
+            <DxButton type="sumbit" sx={{ width: '120px' }}>
+              Submit
+            </DxButton>
+          </StyledFlexCenter>
         </form>
       </StyledCard>
     </StyledCardStack>
