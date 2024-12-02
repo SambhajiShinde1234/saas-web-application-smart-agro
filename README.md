@@ -39,6 +39,10 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 
   ![Screenshot 2024-11-30 110702](https://github.com/user-attachments/assets/bae608c7-222e-43c5-8999-152320d28a10)
 
+- Work Management
+
+  ![Screenshot 2024-12-03 000401](https://github.com/user-attachments/assets/983b1f25-e379-493e-89d6-beb0dfab876d)
+
 
 ## Getting Started
 
