@@ -7,6 +7,7 @@ import SettingIcon from '../components/icons/SettingIcon';
 import Dashboard from '../pages/dashboard/Dashboard';
 import NewInventory from '../pages/Inventory/components/NewInventory';
 import Inventory from '../pages/Inventory/Inventory';
+import NewWork from '../pages/manage-labour/components/NewWork';
 import ManageLabour from '../pages/manage-labour/ManageLabour';
 import Overview from '../pages/overview/Overview';
 import Settings from '../pages/settings/Settings';
@@ -53,6 +54,11 @@ export const APP_ROUTES = [
     path: '/manage-labour',
     component: <ManageLabour />,
   },
+  {
+    id: 18,
+    path: '/work/new',
+    component: <NewWork />,
+  },
 ];
 
 export const MENUS = [
@@ -76,7 +82,7 @@ export const MENUS = [
   },
   {
     id: 4,
-    title: 'Manage Labour',
+    title: 'Manage Work',
     icon: <LabourIcon />,
     href: '/manage-labour',
   },

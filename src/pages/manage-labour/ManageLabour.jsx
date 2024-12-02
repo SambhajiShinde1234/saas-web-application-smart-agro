@@ -1,4 +1,11 @@
-import { StyledCard, StyledCardStack } from '../../components/styled/styled';
+import { useNavigate } from 'react-router-dom';
+import AddIcon from '../../components/icons/AddIcon';
+import {
+  StyledCard,
+  StyledCardStack,
+  StyledFlexBetween,
+} from '../../components/styled/styled';
+import DxButton from '../../components/ui/DxButton';
 import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
 import DxTable from '../../components/ui/DxTable';
 import { LABOR_MANAGEMENT } from '../../dummy-data/FarmData';
@@ -19,9 +26,15 @@ const tableColumns = [
 ];
 
 const ManageLabour = () => {
+  const navigate = useNavigate();
   return (
     <StyledCardStack>
-      <DxPrimaryTypography variant="h6">Labor Management</DxPrimaryTypography>
+      <StyledFlexBetween>
+        <DxPrimaryTypography variant="h6">Work Management</DxPrimaryTypography>
+        <DxButton startIcon={<AddIcon />} onClick={() => navigate('/work/new')}>
+          Add New Work
+        </DxButton>
+      </StyledFlexBetween>
       <StyledCard>
         <DxTable columns={tableColumns} data={LABOR_MANAGEMENT} />
       </StyledCard>
