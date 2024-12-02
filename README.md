@@ -45,7 +45,7 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 
 - Add New Work
 
-![Screenshot 2024-12-03 000341](https://github.com/user-attachments/assets/e52976bd-a3d6-48aa-a64f-43c5373cc1c3)
+![image](https://github.com/user-attachments/assets/f0e2656c-61c0-450b-a26c-0936e265875a)
 
 
 ## Getting Started
