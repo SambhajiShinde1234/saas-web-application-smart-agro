@@ -30,8 +30,8 @@ const taskValidationSchema = yup.object({
     .transform((value, originalValue) => (originalValue === '' ? null : value))
     .positive()
     .required('Total work hours is required'),
-  output: yup.string().trim(),
-  effieciency: yup.string().trim(),
+  output: yup.string().trim().required('Output is required'),
+  effieciency: yup.string().trim().required('Efficiency is required'),
 });
 
 const NewWork = () => {
@@ -111,6 +111,7 @@ const NewWork = () => {
               </Grid2>
               <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
                 <DxTextField
+                  required
                   label="Output"
                   name="output"
                   placeholder="Enter output (e.g. 10 tonnes)"
@@ -120,6 +121,7 @@ const NewWork = () => {
               </Grid2>
               <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
                 <DxTextField
+                  required
                   label="Efficiency"
                   name="effieciency"
                   placeholder="Enter efficiency (e.g. 10 tonnes/worker-hours)"
