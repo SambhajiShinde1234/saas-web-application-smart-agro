@@ -9,6 +9,7 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 - **Responsive Design**: Fully optimized for both mobile and desktop devices.
 - **React & Material-UI**: Leverages the power of Material-UI components for a clean, professional UI.
 - **React Hook Form**: Used React Hook Form for dynamic form handling. 
+- **Yup**: Handled client side Form validation using Yup library.
 - **Styled Components**: Efficient and maintainable styling using styled-components.
 - **High Performance**: Built using the Recharts library for creating visually appealing and interactive charts to display data effectively.
 - **Modular Code**: Organized and reusable components to make the app scalable.
