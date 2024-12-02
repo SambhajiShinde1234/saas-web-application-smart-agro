@@ -10,7 +10,18 @@ import DxDatePicker from '../../../components/ui/DxDatePicker';
 const taskValidationSchema = yup.object({
   work: yup.string().trim().required('Work title is required'),
   date: yup.string().required('Date is required'),
+  totalWorkers: yup
+    .number()
+    .transform((value, originalValue) => (originalValue === '' ? null : value))
+    .positive('This value must be positive')
+    .required('Total workers are required'),
+  totalCost: yup
+    .number()
+    .transform((value, originalValue) => (originalValue === '' ? null : value))
+    .positive()
+    .required('Total worker cost is required'),
 });
+
 const NewWork = () => {
   const {
     handleSubmit,
@@ -47,6 +58,26 @@ const NewWork = () => {
                 name="date"
                 control={control}
                 errorMessage={errors.date?.message}
+              />
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+              <DxTextField
+                label="Total Workers"
+                type="number"
+                name="noOfWorkers"
+                placeholder="Enter total workers"
+                control={control}
+                errorMessage={errors.totalWorkers?.message}
+              />
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, lg: 4 }}>
+              <DxTextField
+                label="Total Worker Cost"
+                type="number"
+                name="totalCost"
+                placeholder="Enter total worker cost"
+                control={control}
+                errorMessage={errors.totalCost?.message}
               />
             </Grid2>
           </Grid2>
