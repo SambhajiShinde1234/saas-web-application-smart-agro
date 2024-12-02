@@ -37,11 +37,15 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 
 - Add New Inventory
 
-  ![Screenshot 2024-11-30 110702](https://github.com/user-attachments/assets/bae608c7-222e-43c5-8999-152320d28a10)
+![Screenshot 2024-11-30 110702](https://github.com/user-attachments/assets/bae608c7-222e-43c5-8999-152320d28a10)
 
 - Work Management
 
-  ![Screenshot 2024-12-03 000401](https://github.com/user-attachments/assets/983b1f25-e379-493e-89d6-beb0dfab876d)
+![Screenshot 2024-12-03 000401](https://github.com/user-attachments/assets/983b1f25-e379-493e-89d6-beb0dfab876d)
+
+- Add New Work
+
+![Screenshot 2024-12-03 000341](https://github.com/user-attachments/assets/e52976bd-a3d6-48aa-a64f-43c5373cc1c3)
 
 
 ## Getting Started
