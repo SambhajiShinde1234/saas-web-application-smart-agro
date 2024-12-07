@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Box } from '@mui/material';
 import {
   BarChart,
   Bar,
@@ -9,6 +10,18 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+
+const CustomTooltip = ({ payload, active, label }) => {
+  console.log(payload);
+  if (active && payload && payload.length)
+    return (
+      <Box sx={{ background: 'red', height: '200px', width: '200px' }}>
+        <p>month: {label}</p>
+        <p>Value: {payload[0].value}</p>
+      </Box>
+    );
+};
+
 const DoubleBarChart = ({
   graphData,
   xAxisDataKey,
@@ -74,7 +87,3 @@ const DoubleBarChart = ({
 
 export default DoubleBarChart;
 
-const CustomTooltip = ({
-  payload }) => {
-console.log(payload)
-}
