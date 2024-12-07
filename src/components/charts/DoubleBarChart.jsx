@@ -51,7 +51,7 @@ const DoubleBarChart = ({
           stroke={barRightFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip cursor={{ fill: 'transparent' }} />
+        <Tooltip cursor={{ fill: 'transparent' }} content={<CustomTooltip />} />
         <Legend iconType={legendIconType} />
         <Bar
           dataKey={barLeftDataKey}
@@ -73,3 +73,8 @@ const DoubleBarChart = ({
 };
 
 export default DoubleBarChart;
+
+const CustomTooltip = ({
+  payload }) => {
+console.log(payload)
+}
