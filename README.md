@@ -18,7 +18,7 @@ This is a modern, responsive SaaS (Software as a Service) web application built 
 
 ## Tech Stack
 
-- **Frontend**: React, Material-UI, Styled Components, Recharts
+- **Frontend**: React, Material-UI, Styled Components, Recharts, Yup, React-hook-form
 - **Tooling**: Prettier, ESLint
 - **Package Manager**: npm
 - **Deploy**: Github pages
