@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import DxTooltip from '../ui/DxTooltip';
 
 const DoubleLineChart = ({
   graphData,
@@ -51,7 +52,7 @@ const DoubleLineChart = ({
           stroke={lineSecondFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip />
+        <Tooltip content={<DxTooltip />} />
         <Legend iconType={legendIconType} />
         <Line
           type="monotone"
