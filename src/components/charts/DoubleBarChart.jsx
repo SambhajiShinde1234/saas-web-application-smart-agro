@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-import { Box } from '@mui/material';
-import DxPrimaryTypography from '../ui/DxPrimaryTypography';
 import {
   BarChart,
   Bar,
@@ -11,35 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
-import {
-  StyledLabelValueText,
-  StyledTooltipCard,
-  StyledTooltipLabelValueStack,
-} from '../styled/styled';
-
-const CustomTooltip = ({ payload, active, label }) => {
-  if (active && payload && payload.length)
-    return (
-      <StyledTooltipCard>
-        <DxPrimaryTypography>
-          {capitalizeFirstLetter(label)}
-        </DxPrimaryTypography>
-        <Box>
-          {payload.map((item, index) => (
-            <StyledTooltipLabelValueStack key={index}>
-              <StyledLabelValueText sx={{ color: item.color }}>
-                {capitalizeFirstLetter(item.dataKey)} :
-              </StyledLabelValueText>
-              <StyledLabelValueText sx={{ color: item.color }}>
-                {item.value}
-              </StyledLabelValueText>
-            </StyledTooltipLabelValueStack>
-          ))}
-        </Box>
-      </StyledTooltipCard>
-    );
-};
+import DxTooltip from '../ui/DxTooltip';
 
 const DoubleBarChart = ({
   graphData,
@@ -83,7 +53,7 @@ const DoubleBarChart = ({
           stroke={barRightFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip cursor={{ fill: 'transparent' }} content={<CustomTooltip />} />
+        <Tooltip cursor={{ fill: 'transparent' }} content={<DxTooltip />} />
         <Legend iconType={legendIconType} />
         <Bar
           dataKey={barLeftDataKey}
