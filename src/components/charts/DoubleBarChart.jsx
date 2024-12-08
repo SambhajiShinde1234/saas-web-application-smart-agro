@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { Box } from '@mui/material';
+import { Box, Divider, Stack, Typography } from '@mui/material';
+import DxPrimaryTypography from '../ui/DxPrimaryTypography';
 import {
   BarChart,
   Bar,
@@ -10,15 +11,31 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
 
 const CustomTooltip = ({ payload, active, label }) => {
   console.log(payload);
   if (active && payload && payload.length)
     return (
-      <Box sx={{ background: '#FFF', padding: '0.5rem', borderRadius: '5px', outline: '1px solid #EBEFF0' }}>
-        <p>month: {label}</p>
-        <p>Value: {payload[0].value}</p>
-      </Box>
+      <Stack
+        sx={{
+          background: '#FFF',
+          padding: '0.5rem 2rem',
+          borderRadius: '5px',
+          outline: '1px solid #EBEFF0',
+          alignItems: 'start',
+          justifyContent: 'start',
+        }}
+      >
+        <DxPrimaryTypography>{capitalizeFirstLetter(label)}</DxPrimaryTypography>
+        <Divider />
+        {payload.map((item, index) => (
+          <Stack key={index} sx={{ flexDirection: 'row', gap: '1rem' }}>
+            <span>{capitalizeFirstLetter(item.dataKey)}</span>
+            <span>{item.value}</span>
+          </Stack>
+        ))}
+      </Stack>
     );
 };
 
@@ -86,4 +103,3 @@ const DoubleBarChart = ({
 };
 
 export default DoubleBarChart;
-
