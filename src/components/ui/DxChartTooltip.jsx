@@ -4,7 +4,7 @@ import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter";
 import { StyledLabelValueText, StyledTooltipCard, StyledTooltipLabelValueStack } from "../styled/styled";
 import DxPrimaryTypography from "./DxPrimaryTypography";
 
-const DxTooltip = ({ payload, active, label }) => {
+const DxChartTooltip = ({ payload, active, label }) => {
   if (active && payload && payload.length)
     return (
       <StyledTooltipCard>
@@ -27,4 +27,4 @@ const DxTooltip = ({ payload, active, label }) => {
     );
 };
 
-export default DxTooltip;
+export default DxChartTooltip;

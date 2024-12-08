@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import DxTooltip from '../ui/DxTooltip';
+import DxChartTooltip from '../ui/DxChartTooltip';
 
 const SingleLineChart = ({
   graphData,
@@ -39,7 +39,7 @@ const SingleLineChart = ({
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={xAxisDataKey} style={{ fontSize: `${fontSize}` }} />
         <YAxis stroke={lineFillColor} style={{ fontSize: `${fontSize}` }} />
-        <Tooltip content={<DxTooltip />} />
+        <Tooltip content={<DxChartTooltip />} />
         <Legend iconType={legendIconType} />
         <Line
           type="monotone"

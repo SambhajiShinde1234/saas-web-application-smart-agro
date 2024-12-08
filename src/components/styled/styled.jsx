@@ -289,7 +289,7 @@ export const StyledTooltipCard = styled(Stack)(() => ({
 
 export const StyledTooltipLabelValueStack = styled(Stack)(() => ({
   flexDirection: 'row',
-  gap: '1rem',
+  gap: '0.5rem',
 }));
 
 export const StyledLabelValueText = styled(DxSecondaryTypography)(() => ({}));

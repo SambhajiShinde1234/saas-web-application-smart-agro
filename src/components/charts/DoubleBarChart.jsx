@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import DxTooltip from '../ui/DxTooltip';
+import DxChartTooltip from '../ui/DxChartTooltip';
 
 const DoubleBarChart = ({
   graphData,
@@ -53,7 +53,7 @@ const DoubleBarChart = ({
           stroke={barRightFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip cursor={{ fill: 'transparent' }} content={<DxTooltip />} />
+        <Tooltip cursor={{ fill: 'transparent' }} content={<DxChartTooltip />} />
         <Legend iconType={legendIconType} />
         <Bar
           dataKey={barLeftDataKey}
