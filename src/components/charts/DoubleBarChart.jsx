@@ -15,7 +15,7 @@ const CustomTooltip = ({ payload, active, label }) => {
   console.log(payload);
   if (active && payload && payload.length)
     return (
-      <Box sx={{ background: 'red', height: '200px', width: '200px' }}>
+      <Box sx={{ background: '#FFF', padding: '0.5rem', borderRadius: '5px', outline: '1px solid #EBEFF0' }}>
         <p>month: {label}</p>
         <p>Value: {payload[0].value}</p>
       </Box>
