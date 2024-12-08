@@ -283,7 +283,7 @@ export const StyledTooltipCard = styled(Stack)(() => ({
   background: '#FFF',
   padding: '0.5rem 1rem',
   borderRadius: '5px',
-  outline: '1px solid #1FC28B',
+  outline: '1px solid #A0A4A3',
   gap: '0.3rem',
 }));
 
