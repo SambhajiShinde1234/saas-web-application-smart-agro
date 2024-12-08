@@ -17,6 +17,7 @@ import {
   TextField,
 } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
+import DxSecondaryTypography from '../ui/DxSecondaryTypography';
 
 // ui
 
@@ -43,7 +44,7 @@ export const StyledLabel = styled(InputLabel)(() => ({
 }));
 
 export const StyledRequiredMark = styled('span')(() => ({
-  color: 'red'
+  color: 'red',
 }));
 
 export const StyledSelect = styled(Select)(() => ({
@@ -257,7 +258,7 @@ export const StyledMainBox = styled(Box)(
     //to bring header , children and footer in align together
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   })
 );
 
@@ -276,3 +277,19 @@ export const StyledCard = styled(Box)(() => ({
 export const StyledCardStack = styled(Stack)(() => ({
   gap: '1em',
 }));
+
+// charts
+export const StyledTooltipCard = styled(Stack)(() => ({
+  background: '#FFF',
+  padding: '0.5rem 1rem',
+  borderRadius: '5px',
+  outline: '1px solid #1FC28B',
+  gap: '0.3rem',
+}));
+
+export const StyledTooltipLabelValueStack = styled(Stack)(() => ({
+  flexDirection: 'row',
+  gap: '1rem',
+}));
+
+export const StyledLabelValueText = styled(DxSecondaryTypography)(() => ({}));

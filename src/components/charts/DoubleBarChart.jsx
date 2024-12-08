@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import DxPrimaryTypography from '../ui/DxPrimaryTypography';
 import {
   BarChart,
@@ -12,30 +12,32 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
+import {
+  StyledLabelValueText,
+  StyledTooltipCard,
+  StyledTooltipLabelValueStack,
+} from '../styled/styled';
 
 const CustomTooltip = ({ payload, active, label }) => {
-  console.log(payload);
   if (active && payload && payload.length)
     return (
-      <Stack
-        sx={{
-          background: '#FFF',
-          padding: '0.5rem 2rem',
-          borderRadius: '5px',
-          outline: '1px solid #EBEFF0',
-          alignItems: 'start',
-          justifyContent: 'start',
-        }}
-      >
-        <DxPrimaryTypography>{capitalizeFirstLetter(label)}</DxPrimaryTypography>
-        <Divider />
-        {payload.map((item, index) => (
-          <Stack key={index} sx={{ flexDirection: 'row', gap: '1rem' }}>
-            <span>{capitalizeFirstLetter(item.dataKey)}</span>
-            <span>{item.value}</span>
-          </Stack>
-        ))}
-      </Stack>
+      <StyledTooltipCard>
+        <DxPrimaryTypography>
+          {capitalizeFirstLetter(label)}
+        </DxPrimaryTypography>
+        <Box>
+          {payload.map((item, index) => (
+            <StyledTooltipLabelValueStack key={index}>
+              <StyledLabelValueText sx={{ color: item.color }}>
+                {capitalizeFirstLetter(item.dataKey)} :
+              </StyledLabelValueText>
+              <StyledLabelValueText sx={{ color: item.color }}>
+                {item.value}
+              </StyledLabelValueText>
+            </StyledTooltipLabelValueStack>
+          ))}
+        </Box>
+      </StyledTooltipCard>
     );
 };
 
