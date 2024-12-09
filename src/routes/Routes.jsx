@@ -11,7 +11,7 @@ import NewWork from '../pages/manage-labour/components/NewWork';
 import ManageLabour from '../pages/manage-labour/ManageLabour';
 import Overview from '../pages/overview/Overview';
 import Settings from '../pages/settings/Settings';
-import Support from '../pages/support/Support';
+import Support from '../pages/help-center/HelpCenter';
 
 export const APP_ROUTES = [
   {
@@ -36,7 +36,7 @@ export const APP_ROUTES = [
   },
   {
     id: 5,
-    path: '/support',
+    path: '/help-center',
     component: <Support />,
   },
   {
@@ -97,8 +97,8 @@ export const EXTRA_MENUS = [
   },
   {
     id: 2,
-    title: 'Support',
+    title: 'Help Center',
     icon: <HelpIcon />,
-    href: '/support',
+    href: '/help-center',
   },
 ];
