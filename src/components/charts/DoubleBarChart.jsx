@@ -53,7 +53,7 @@ const DoubleBarChart = ({
           stroke={barRightFillColor}
           style={{ fontSize: `${fontSize}` }}
         />
-        <Tooltip cursor={{ fill: 'transparent' }} content={<DxChartTooltip />} />
+        <Tooltip cursor={{ fill: 'transparent' }} content={<DxChartTooltip />} position="left" />
         <Legend iconType={legendIconType} />
         <Bar
           dataKey={barLeftDataKey}
