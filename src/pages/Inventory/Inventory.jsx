@@ -44,8 +44,8 @@ const inventoryTableColumns = {
       columnName: 'Action',
       align: 'center',
       width: 150,
-      render: (row) => (
-      )
+      // render: (row) => (
+      // )
     },
   ],
   fertilizers: [
