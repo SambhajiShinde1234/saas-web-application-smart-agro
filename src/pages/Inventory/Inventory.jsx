@@ -40,6 +40,11 @@ const inventoryTableColumns = {
       align: 'center',
       width: 150,
     },
+    {
+      columnName: 'Action',
+      align: 'center',
+      width: 150,
+    },
   ],
   fertilizers: [
     { columnName: 'Name', field: 'itemName', align: 'left', width: 150 },
