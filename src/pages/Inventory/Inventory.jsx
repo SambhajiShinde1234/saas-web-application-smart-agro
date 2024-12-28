@@ -11,6 +11,7 @@ import { INVENTORY_DATA } from '../../dummy-data/InventoryData';
 import { useState } from 'react';
 import AddIcon from '../../components/icons/AddIcon';
 import { useNavigate } from 'react-router-dom';
+import DxTableAction from '../../components/ui/DxTableAction';
 
 const inventoryTableColumns = {
   seeds: [
@@ -44,8 +45,7 @@ const inventoryTableColumns = {
       columnName: 'Action',
       align: 'center',
       width: 150,
-      // render: (row) => (
-      // )
+      render: (row) => <DxTableAction onEdit={() => handleEdit(row)} />,
     },
   ],
   fertilizers: [
