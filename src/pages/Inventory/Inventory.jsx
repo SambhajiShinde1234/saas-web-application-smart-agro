@@ -45,7 +45,14 @@ const inventoryTableColumns = {
       columnName: 'Action',
       align: 'center',
       width: 150,
-      render: (row) => <DxTableAction onEdit={() => handleEdit(row)} />,
+      render: (row) => (
+        <button style={{ wisht: '400px'}}>Edit</button>
+        // <DxTableAction
+        //   onEdit={() => {
+        //     // handleEdit(row);
+        //   }}
+        // />
+      ),
     },
   ],
   fertilizers: [
@@ -149,6 +156,13 @@ const inventoryCategories = [
 const Inventory = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('seeds');
+  const [editRow, setEditRow] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleEdit = (row) => {
+    setEditRow(row);
+    setIsModalOpen(!isModalOpen);
+  };
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);

@@ -1,13 +1,17 @@
-/* eslint-disable react/prop-types */
-import { IconButton } from '@mui/material';
 import EditIcon from '../icons/EditIcon';
+import DxIconButton from '../ui/DxIconButton';
+import PropTypes from 'prop-types';
 
 const DxTableAction = ({ onEdit }) => {
   return (
-    <IconButton onClick={onEdit} aria-label="edit">
+    <DxIconButton onClick={onEdit} aria-label="edit">
       <EditIcon />
-    </IconButton>
+    </DxIconButton>
   );
+};
+
+DxTableAction.propTypes = {
+  onEdit: PropTypes.func.isRequired,
 };
 
 export default DxTableAction;
