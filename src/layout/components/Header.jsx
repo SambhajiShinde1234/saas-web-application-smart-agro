@@ -1,7 +1,7 @@
 import {
   Box,
   IconButton,
-  Stack,
+  // Stack,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -14,24 +14,24 @@ import {
   StyledFlexCenter,
   StyledIconBox,
 } from '../../components/styled/styled';
-import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
-import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
+// import DxPrimaryTypography from '../../components/ui/DxPrimaryTypography';
+// import DxSecondaryTypography from '../../components/ui/DxSecondaryTypography';
 import HumbergureMenu from '../../components/icons/HumbergureMenu';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import LeftArrowIcon from '../../components/icons/LeftArrowIcon';
 
-const WelcomeSection = () => {
-  return (
-    <Stack gap={0.5}>
-      <DxPrimaryTypography variant="h5" sx={{ fontFamily: 'cursive' }}>
-        Hello, Sambhaji ! 👋
-      </DxPrimaryTypography>
-      <DxSecondaryTypography variant="">
-        Welcome back to Smart Agro !
-      </DxSecondaryTypography>
-    </Stack>
-  );
-};
+// const WelcomeSection = () => {
+//   return (
+//     <Stack gap={0.5}>
+//       <DxPrimaryTypography variant="h5" sx={{ fontFamily: 'cursive' }}>
+//         Hello, Sambhaji ! 👋
+//       </DxPrimaryTypography>
+//       <DxSecondaryTypography variant="">
+//         Welcome back to Smart Agro !
+//       </DxSecondaryTypography>
+//     </Stack>
+//   );
+// };
 
 const NotificationSection = () => {
   return (
@@ -53,7 +53,7 @@ const SearchSection = () => {
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ handleDrawerToggle }) => {
-  const location = useLocation();
+  // const location = useLocation();
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -79,11 +79,11 @@ const Header = ({ handleDrawerToggle }) => {
               <SearchSection />
               <NotificationSection />
             </StyledFlexBetween>
-            {location.pathname === '/dashboard' && (
+            {/* {location.pathname === '/dashboard' && (
               <Box sx={{ marginTop: '1rem' }}>
                 <WelcomeSection />
               </Box>
-            )}
+            )} */}
           </StyledCardStack>
         )}
         {!isMobileScreen && (
@@ -94,7 +94,7 @@ const Header = ({ handleDrawerToggle }) => {
                   <LeftArrowIcon />
                 </DxIconButton>
               </StyledIconBox>
-              <WelcomeSection />
+              {/* <WelcomeSection /> */}
             </StyledFlexCenter>
             <StyledFlexCenter>
               <SearchSection />
